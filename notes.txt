@@ -1,0 +1,9 @@
+
+One way to view a constant implemented as an unevaluated sum of several floating-
+point values is as a polynomial in t = B^-q where B is the base of the floating-point number and 
+q <= p where p is the precision of the number.
+
+For double we could use full 53-bit constants and t = 2^{-53}.
+
+We could use 52-bit constants expressed as 13-digit hex constants
+and t = 2^{-52}.

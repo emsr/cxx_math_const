@@ -29,4 +29,6 @@
 *.app
 
 # Local stuff
+test_math_const
 test_cmath_const
+test_ext_math_const

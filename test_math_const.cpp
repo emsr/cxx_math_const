@@ -8,4 +8,5 @@ $HOME/bin/bin/g++ -std=c++17 -g -o test_math_const test_math_const.cpp
 int
 main()
 {
+  using namespace std::constants::math_constants;
 }

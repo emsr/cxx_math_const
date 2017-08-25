@@ -214,6 +214,18 @@ inline namespace math_constants
     constexpr _RealType
     m_catalan       = 9.1596'55941'77219'01505'46035'14932'38411'07741e-1L;
 
+  /// Ape'ry's constant @f$ \zeta(3) = \pi^2/6 @f$
+  /// (OEIS A002117)
+  template<typename _Tp>
+    inline constexpr _Tp
+    m_apery         = 1.2020'56903'15959'42853'99738'16151'14499'90768e+0L;
+
+  /// Glaisher's constant @f$ A =  @f$
+  /// (OEIS A074962)
+  template<typename _Tp>
+    inline constexpr _Tp
+    m_glaisher      = 1.2824'27129'10062'26368'75342'56886'97917'27767e+0L;
+
   /// Constant: @f$ \pi^2/6 @f$.
   template<typename _RealType>
     constexpr _RealType

@@ -9,6 +9,7 @@ $HOME/bin/bin/g++ -std=c++17 -g -o test_math_const test_math_const.cpp
 #include <string>
 #include <type_traits>
 
+// This can't work as constexpr.
 struct sfloat : public std::string
 {
   sfloat(float f)
@@ -31,6 +32,6 @@ main()
   auto pi = std::math_constants::pi_v<std::complex<double>>;
   std::cout << pi << '\n';
 
-  auto glaisher = std::math_constants::glaisher_v<sfloat>;
-  std::cout << glaisher << '\n';
+  //auto glaisher = std::math_constants::glaisher_v<sfloat>;
+  //std::cout << glaisher << '\n';
 }

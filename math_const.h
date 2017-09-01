@@ -29,13 +29,13 @@ namespace math_constants {
               //= _Tp{0x3.243'F6A8'885A'308D'3131'98A2'E037'0734'4A40'9382'2299'F31Dp+0}
 
   /// The reciprocal of Archimedes' constant @f$ 1/\pi @f$
-  /// (OEIS )
+  /// (OEIS A049541)
   template<typename _Tp>
     inline constexpr _Tp
     invpi_v     = _Tp{3.1830'98861'83790'67153'77675'26745'02872'40691e-1L};
 
   /// The reciprocal square root of Archimedes' constant @f$ 1/\sqrt{\pi} @f$
-  /// (OEIS )
+  /// (OEIS A087197)
   template<typename _Tp>
     inline constexpr _Tp
     invsqrtpi_v = _Tp{5.6418'95835'47756'28694'80794'51560'77258'58438e-1L};
@@ -47,31 +47,31 @@ namespace math_constants {
     ln2_v       = _Tp{6.9314'71805'59945'30941'72321'21458'17656'80748e-1L};
 
   /// The Napierian logarithm of 10 @f$ ln(10) @f$
-  /// (OEIS )
+  /// (OEIS A002392)
   template<typename _Tp>
     inline constexpr _Tp
     ln10_v      = _Tp{2.3025'85092'99404'56840'17991'45468'43642'07602e+0L};
 
   /// The square root of 2 @f$ \sqrt{2} @f$
-  /// (OEIS )
+  /// (OEIS A002193)
   template<typename _Tp>
     inline constexpr _Tp
     sqrt2_v     = _Tp{1.4142'13562'37309'50488'01688'72420'96980'78569e+0L};
 
   /// The square root of 3 @f$ \sqrt{3} @f$
-  /// (OEIS )
+  /// (OEIS A002194)
   template<typename _Tp>
     inline constexpr _Tp
     sqrt3_v     = _Tp{1.7320'50807'56887'72935'27446'34150'58723'66945e+0L};
 
   /// The reciprocal square root of 3 @f$ 1 / \sqrt{3} @f$
-  /// (OEIS )
+  /// (OEIS A020760)
   template<typename _Tp>
     inline constexpr _Tp
     invsqrt3_v  = _Tp{5.7735'02691'89625'76450'91487'80501'95745'56475e-1L};
 
   /// The radians per degree conversion factor @f$ \pi / 180 @f$
-  /// (OEIS )
+  /// (OEIS A019685)
   template<typename _Tp>
     inline constexpr _Tp
     radian_v    = _Tp{1.7453'29251'99432'95769'23690'76848'86127'13443e-2L};
@@ -83,7 +83,7 @@ namespace math_constants {
     egamma_v    = _Tp{5.7721'56649'01532'86060'65120'90082'40243'10432e-1L};
 
   /// The golden ratio @f$ \phi = (\sqrt{5} + 1)/2 @f$
-  /// (OEIS )
+  /// (OEIS A001622)
   template<typename _Tp>
     inline constexpr _Tp
     phi_v       = _Tp{1.6180'33988'74989'48482'04586'83436'56381'17720e+0L};

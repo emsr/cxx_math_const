@@ -25,19 +25,19 @@ namespace math_constants {
   template<typename _Tp>
     inline constexpr _Tp
     pi_v        = _Tp{3.1415'92653'58979'32384'62643'38327'95028'84195e+0L};
-              //= _Tp{0x3.243'F6A8'885A'308D'3131'98A2'E037'0734'4A40'9382'2299'F31Dp+0L}
+  //= _Tp{0x3.243'F6A8'885A'308D'3131'98A2'E037'0734'4A40'9382'2299'F31Dp+0L}
 
   /// The reciprocal of Archimedes' constant @f$ 1/\pi @f$
   /// <a href="https://oeis.org/A049541"> (OEIS A049541)</a>
   template<typename _Tp>
     inline constexpr _Tp
-    invpi_v     = _Tp{3.1830'98861'83790'67153'77675'26745'02872'40691e-1L};
+    inv_pi_v    = _Tp{3.1830'98861'83790'67153'77675'26745'02872'40691e-1L};
 
   /// The reciprocal square root of Archimedes' constant @f$ 1/\sqrt{\pi} @f$
   /// <a href="https://oeis.org/A087197"> (OEIS A087197) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    invsqrtpi_v = _Tp{5.6418'95835'47756'28694'80794'51560'77258'58438e-1L};
+    inv_sqrtpi_v = _Tp{5.6418'95835'47756'28694'80794'51560'77258'58438e-1L};
 
   /// The Napierian logarithm of 2 @f$ ln(2) @f$
   /// <a href="https://oeis.org/A002162"> (OEIS A002162) </a>
@@ -67,7 +67,7 @@ namespace math_constants {
   /// <a href="https://oeis.org/A020760"> (OEIS A020760) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    invsqrt3_v  = _Tp{5.7735'02691'89625'76450'91487'80501'95745'56475e-1L};
+    inv_sqrt3_v  = _Tp{5.7735'02691'89625'76450'91487'80501'95745'56475e-1L};
 
   /// The radians per degree conversion factor @f$ \pi / 180 @f$
   /// <a href="https://oeis.org/A019685"> (OEIS A019685) </a>
@@ -86,24 +86,6 @@ namespace math_constants {
   template<typename _Tp>
     inline constexpr _Tp
     phi_v       = _Tp{1.6180'33988'74989'48482'04586'83436'56381'17720e+0L};
-
-  /// Catalan's constant @f$ G = 1 - 1/9 + 1/25 - 1/49 + 1/81 - ... @f$
-  /// <a href="https://oeis.org/A006752"> (OEIS A006752) </a>
-  template<typename _Tp>
-    inline constexpr _Tp
-    catalan_v   = _Tp{9.1596'55941'77219'01505'46035'14932'38411'07741e-1L};
-
-  /// Ape'ry's constant @f$ \zeta(3) = \pi^2/6 @f$
-  /// <a href="https://oeis.org/A002117"> (OEIS A002117) </a>
-  template<typename _Tp>
-    inline constexpr _Tp
-    apery_v     = _Tp{1.2020'56903'15959'42853'99738'16151'14499'90768e+0L};
-
-  /// Glaisher's constant @f$ A = e^{\frac{1}{12} - \zeta'(-1)} @f$
-  /// <a href="https://oeis.org/A074962"> (OEIS A074962) </a>
-  template<typename _Tp>
-    inline constexpr _Tp
-    glaisher_v  = _Tp{1.2824'27129'10062'26368'75342'56886'97917'27767e+0L};
 
   // float "specializations"
 
@@ -128,12 +110,12 @@ namespace math_constants {
   /// The \c float version of the reciprocal of Archimedes' constant
   /// @f$ 1/\pi @f$
   inline constexpr float
-  invpif = invpi_v<float>;
+  inv_pif = inv_pi_v<float>;
 
-  /// The \c float version of the reciprocal square root of Archimedes' constant
-  /// @f$ 1/\sqrt{\pi} @f$
+  /// The \c float version of the reciprocal square root
+  /// of Archimedes' constant @f$ 1/\sqrt{\pi} @f$
   inline constexpr float
-  invsqrtpif = invsqrtpi_v<float>;
+  inv_sqrtpif = inv_sqrtpi_v<float>;
 
   /// The \c float version of the Napierian logarithm of 2 @f$ ln(2) @f$
   inline constexpr float
@@ -154,7 +136,7 @@ namespace math_constants {
   /// The \c float version of the reciprocal square root of 3
   /// @f$ 1 / \sqrt{3} @f$
   inline constexpr float
-  invsqrt3f = invsqrt3_v<float>;
+  inv_sqrt3f = inv_sqrt3_v<float>;
 
   /// The \c float version of the radians per degree conversion factor
   /// @f$ \pi / 180 @f$
@@ -168,20 +150,6 @@ namespace math_constants {
   /// The \c float version of the golden ratio @f$ \phi = (\sqrt{5} + 1)/2 @f$
   inline constexpr float
   phif = phi_v<float>;
-
-  /// The \c float version of Catalan's constant
-  /// @f$ G = 1 - 1/9 + 1/25 - 1/49 + 1/81 - ... @f$
-  inline constexpr float
-  catalanf = catalan_v<float>;
-
-  /// The \c float version of Ape'ry's constant @f$ \zeta(3) = \pi^2/6 @f$
-  inline constexpr float
-  aperyf = apery_v<float>;
-
-  /// The \c float version of Glaisher's constant
-  /// @f$ A = e^{\frac{1}{12} - \zeta'(-1)} @f$
-  inline constexpr float
-  glaisherf = glaisher_v<float>;
 
   // double "specializations"
 
@@ -204,12 +172,12 @@ namespace math_constants {
   /// The \c double version of the reciprocal of Archimedes' constant
   /// @f$ 1/\pi @f$
   inline constexpr double
-  invpi = invpi_v<double>;
+  inv_pi = inv_pi_v<double>;
 
   /// The \c double version of the reciprocal square root of Archimedes'
   /// constant @f$ 1/\sqrt{\pi} @f$
   inline constexpr double
-  invsqrtpi = invsqrtpi_v<double>;
+  inv_sqrtpi = inv_sqrtpi_v<double>;
 
   /// The \c double version of the Napierian logarithm of 2 @f$ ln(2) @f$
   inline constexpr double
@@ -230,7 +198,7 @@ namespace math_constants {
   /// The \c double version of the reciprocal square root of 3
   /// @f$ 1 / \sqrt{3} @f$
   inline constexpr double
-  invsqrt3 = invsqrt3_v<double>;
+  inv_sqrt3 = inv_sqrt3_v<double>;
 
   /// The \c double version of the radians per degree conversion factor
   /// @f$ \pi / 180 @f$
@@ -244,20 +212,6 @@ namespace math_constants {
   /// The \c double version of the golden ratio @f$ \phi = (\sqrt{5} + 1)/2 @f$
   inline constexpr double
   phi = phi_v<double>;
-
-  /// The \c double version of Catalan's constant
-  /// @f$ G = 1 - 1/9 + 1/25 - 1/49 + 1/81 - ... @f$
-  inline constexpr double
-  catalan = catalan_v<double>;
-
-  /// The \c double version of Ape'ry's constant @f$ \zeta(3) = \pi^2/6 @f$
-  inline constexpr double
-  apery = apery_v<double>;
-
-  /// The \c double version of Glaisher's constant
-  /// @f$ A = e^{\frac{1}{12} - \zeta'(-1)} @f$
-  inline constexpr double
-  glaisher = glaisher_v<double>;
 
   // long double "specializations"
 
@@ -281,12 +235,12 @@ namespace math_constants {
   /// The \c long double version of the reciprocal of Archimedes' constant
   /// @f$ 1/\pi @f$
   inline constexpr long double
-  invpil = invpi_v<long double>;
+  inv_pil = inv_pi_v<long double>;
 
   /// The \c long double version of the reciprocal square root of Archimedes'
   /// constant @f$ 1/\sqrt{\pi} @f$
   inline constexpr long double
-  invsqrtpil = invsqrtpi_v<long double>;
+  inv_sqrtpil = inv_sqrtpi_v<long double>;
 
   /// The \c long double version of the Napierian logarithm of 2 @f$ ln(2) @f$
   inline constexpr long double
@@ -307,7 +261,7 @@ namespace math_constants {
   /// The \c long double version of the reciprocal square root of 3
   /// @f$ 1 / \sqrt{3} @f$
   inline constexpr long double
-  invsqrt3l = invsqrt3_v<long double>;
+  inv_sqrt3l = inv_sqrt3_v<long double>;
 
   /// The \c long double version of the radians per degree conversion factor
   /// @f$ \pi / 180 @f$
@@ -323,20 +277,6 @@ namespace math_constants {
   /// @f$ \phi = (\sqrt{5} + 1)/2 @f$
   inline constexpr long double
   phil = phi_v<long double>;
-
-  /// The \c long double version of Catalan's constant
-  /// @f$ G = 1 - 1/9 + 1/25 - 1/49 + 1/81 - ... @f$
-  inline constexpr long double
-  catalanl = catalan_v<long double>;
-
-  /// The \c long double version of Ape'ry's constant @f$ \zeta(3) = \pi^2/6 @f$
-  inline constexpr long double
-  aperyl = apery_v<long double>;
-
-  /// The \c long double version of Glaisher's constant
-  /// @f$ A = e^{\frac{1}{12} - \zeta'(-1)} @f$
-  inline constexpr long double
-  glaisherl = glaisher_v<long double>;
 
 } // namespace math_constants
 } // namespace std

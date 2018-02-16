@@ -31,7 +31,4 @@ main()
 
   auto pi = std::math_constants::pi_v<std::complex<double>>;
   std::cout << pi << '\n';
-
-  //auto glaisher = std::math_constants::glaisher_v<sfloat>;
-  //std::cout << glaisher << '\n';
 }

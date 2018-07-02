@@ -29,6 +29,6 @@ main()
 {
   using namespace std::math_constants;
 
-  auto pi = std::math_constants::pi_v<std::complex<double>>;
+  auto pi = std::math_constants::piv<std::complex<double>>;
   std::cout << pi << '\n';
 }

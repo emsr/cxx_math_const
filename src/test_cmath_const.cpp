@@ -3,6 +3,7 @@ g++ -std=c++14 -o test_cmath_const test_cmath_const.cpp
 */
 
 #include "cmath_const.h"
+#include <cmath>
 
 template<typename Real>
   void
@@ -12,7 +13,7 @@ template<typename Real>
 
 #ifdef M_PI
 #undef M_PI
-constexpr auto M_PI = std::constants::math_constants::m_pi<>;
+constexpr auto M_PI = std::constants::math_constants::m_pi<double>;
 #endif
 
 int

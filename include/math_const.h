@@ -1,6 +1,6 @@
 
 namespace std {
-namespace math_constants {
+namespace math {
 
   /// Euler constant @f$ e = 2.71828... @f$
   /// <a href="https://oeis.org/A001113"> (OEIS A001113) </a>
@@ -257,5 +257,5 @@ namespace math_constants {
   inline constexpr long double
   phil = phi_v<long double>;
 
-} // namespace math_constants
+} // namespace math
 } // namespace std

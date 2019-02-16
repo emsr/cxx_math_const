@@ -9,6 +9,16 @@ $HOME/bin/bin/g++ -std=c++17 -g -o test_math_const test_math_const.cpp
 #include <string>
 #include <type_traits>
 
+#if __cpp_lib_type_trait_variable_templates < 201510L
+namespace std
+{
+  template<typename _Tp, typename... _Args>
+    constexpr bool is_constructible_v = is_constructible<_Tp, _Args...>::value;
+  template<typename _Flt>
+    constexpr bool is_floating_point_v = is_floating_point<_Flt>::value;
+}
+#endif
+
 // This can't work as constexpr.
 struct sfloat : public std::string
 {

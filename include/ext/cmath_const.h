@@ -22,12 +22,12 @@
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file ext/math_const.h
+/** @file ext/cmath_const.h
  *  This file is a GNU extension to the Standard C++ Library.
  */
 
-#ifndef _EXT_MATH_CONST_H
-#define _EXT_MATH_CONST_H 1
+#ifndef _GLIBCXX_EXT_CMATH_CONST_H
+#define _GLIBCXX_EXT_CMATH_CONST_H 1
 
 #include <type_traits>
 #include <limits>
@@ -391,4 +391,4 @@ namespace constants
 } // namespace constants
 } // namespace std
 
-#endif // _EXT_MATH_CONST_H
+#endif // _GLIBCXX_EXT_CMATH_CONST_H

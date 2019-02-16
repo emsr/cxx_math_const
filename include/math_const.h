@@ -44,80 +44,80 @@ namespace math
   /// <a href="https://oeis.org/A001113"> (OEIS A001113) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    e_v         = _Tp{2.7182'81828'45904'52353'60287'47135'26624'97759e+0L};
+    e_v           = _Tp{2.7182'81828'45904'52353'60287'47135'26624'97759e+0L};
 
   /// The base-2 logarithm of the Euler constant @f$ log_2(e) @f$
   /// <a href="https://oeis.org/A181171"> (OEIS A181171) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    log2e_v     = _Tp{1.4426'95040'88896'34073'59924'68100'18921'37427e+0L};
+    log2e_v       = _Tp{1.4426'95040'88896'34073'59924'68100'18921'37427e+0L};
 
   /// The base-10 logarithm of the Euler constant @f$ log_{10}(e) @f$
   /// <a href="https://oeis.org/A002392"> (OEIS A002392) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    log10e_v    = _Tp{4.3429'44819'03251'82765'11289'18916'60508'22940e-1L};
+    log10e_v      = _Tp{4.3429'44819'03251'82765'11289'18916'60508'22940e-1L};
 
   /// The Archimedean constant @f$ \pi = 3.1415... @f$
   /// <a href="https://oeis.org/A000796"> (OEIS A000796) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    pi_v        = _Tp{3.1415'92653'58979'32384'62643'38327'95028'84195e+0L};
+    pi_v          = _Tp{3.1415'92653'58979'32384'62643'38327'95028'84195e+0L};
   //= _Tp{0x3.243'F6A8'885A'308D'3131'98A2'E037'0734'4A40'9382'2299'F31Dp+0L}
 
   /// The reciprocal of Archimedes' constant @f$ 1/\pi @f$
   /// <a href="https://oeis.org/A049541"> (OEIS A049541)</a>
   template<typename _Tp>
     inline constexpr _Tp
-    inv_pi_v    = _Tp{3.1830'98861'83790'67153'77675'26745'02872'40691e-1L};
+    inv_pi_v      = _Tp{3.1830'98861'83790'67153'77675'26745'02872'40691e-1L};
 
   /// The reciprocal square root of Archimedes' constant @f$ 1/\sqrt{\pi} @f$
   /// <a href="https://oeis.org/A087197"> (OEIS A087197) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    inv_sqrtpi_v = _Tp{5.6418'95835'47756'28694'80794'51560'77258'58438e-1L};
+    inv_sqrtpi_v  = _Tp{5.6418'95835'47756'28694'80794'51560'77258'58438e-1L};
 
   /// The Napierian logarithm of 2 @f$ ln(2) @f$
   /// <a href="https://oeis.org/A002162"> (OEIS A002162) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    ln2_v       = _Tp{6.9314'71805'59945'30941'72321'21458'17656'80748e-1L};
+    ln2_v         = _Tp{6.9314'71805'59945'30941'72321'21458'17656'80748e-1L};
 
   /// The Napierian logarithm of 10 @f$ ln(10) @f$
   /// <a href="https://oeis.org/A002392"> (OEIS A002392) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    ln10_v      = _Tp{2.3025'85092'99404'56840'17991'45468'43642'07602e+0L};
+    ln10_v        = _Tp{2.3025'85092'99404'56840'17991'45468'43642'07602e+0L};
 
   /// The square root of 2 @f$ \sqrt{2} @f$
   /// <a href="https://oeis.org/A002193"> (OEIS A002193) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    sqrt2_v     = _Tp{1.4142'13562'37309'50488'01688'72420'96980'78569e+0L};
+    sqrt2_v       = _Tp{1.4142'13562'37309'50488'01688'72420'96980'78569e+0L};
 
   /// The square root of 3 @f$ \sqrt{3} @f$
   /// <a href="https://oeis.org/A002194"> (OEIS A002194) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    sqrt3_v     = _Tp{1.7320'50807'56887'72935'27446'34150'58723'66945e+0L};
+    sqrt3_v       = _Tp{1.7320'50807'56887'72935'27446'34150'58723'66945e+0L};
 
   /// The reciprocal square root of 3 @f$ 1 / \sqrt{3} @f$
   /// <a href="https://oeis.org/A020760"> (OEIS A020760) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    inv_sqrt3_v  = _Tp{5.7735'02691'89625'76450'91487'80501'95745'56475e-1L};
+    inv_sqrt3_v   = _Tp{5.7735'02691'89625'76450'91487'80501'95745'56475e-1L};
 
   /// The Euler-Mascheroni constant @f$ \gamma_E @f$
   /// <a href="https://oeis.org/A001620"> (OEIS A001620) </a>
   template<typename _Tp>
     inline constexpr _Tp
-    egamma_v    = _Tp{5.7721'56649'01532'86060'65120'90082'40243'10432e-1L};
+    egamma_v      = _Tp{5.7721'56649'01532'86060'65120'90082'40243'10432e-1L};
 
   /// The golden ratio @f$ \phi = (\sqrt{5} + 1)/2 @f$
   /// <a href="https://oeis.org/A001622"> (OEIS A001622)
   template<typename _Tp>
     inline constexpr _Tp
-    phi_v       = _Tp{1.6180'33988'74989'48482'04586'83436'56381'17720e+0L};
+    phi_v         = _Tp{1.6180'33988'74989'48482'04586'83436'56381'17720e+0L};
 
   // float "specializations"
 

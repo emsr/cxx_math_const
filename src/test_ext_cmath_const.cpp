@@ -1,12 +1,12 @@
 /*
-g++ -std=c++17 -o test_ext_math_const test_ext_math_const.cpp
+g++ -std=c++17 -o test_ext_cmath_const test_ext_cmath_const.cpp
 */
 
-#include <ext/math>
+#include <ext/cmath>
 
 template<typename Real>
   void
-  test_ext_math_const()
+  test_ext_cmath_const()
   {
   }
 

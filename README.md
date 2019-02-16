@@ -1,7 +1,7 @@
 This project collects various ideas about mathematical constants for C++.
 
 The main effort now is to follow the effort in
-[D0631R1 Math Constants](wg21.link/p0631).
+[D0631R1 Math Constants](https://wg21.link/p0631).
 
 The file math_const.h has the latest.
 

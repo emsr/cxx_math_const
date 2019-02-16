@@ -32,7 +32,7 @@
 #include <type_traits>
 #include <limits>
 
-namespace std
+namespace __gnu_cxx
 {
 namespace constants
 {
@@ -158,7 +158,7 @@ namespace constants
     };
 
   // The following functions mirror the constants abobe but also
-  // admit generic programming with non-findamental types.
+  // admit generic programming with non-fundamental types.
   // For fundamental types, these constexpr functions return
   // the appropriate constant above.
   // Developers of multi-precision types are encouraged to overload
@@ -388,7 +388,7 @@ namespace constants
     { return math_constants<_Real>::__one_div_root_2; }
 
 
-} // namespace constants
+} // namespace __gnu_cxx
 } // namespace std
 
 #endif // _GLIBCXX_EXT_CMATH_CONST_H

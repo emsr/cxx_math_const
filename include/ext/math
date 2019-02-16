@@ -1,4 +1,4 @@
-// <math> -*- C++ -*-
+// <ext/math> -*- C++ -*-
 
 // Copyright (C) 2019 Free Software Foundation, Inc.
 //
@@ -22,21 +22,21 @@
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/math
+/** @file include/ext/math
  *  This is a Standard C++ Library header.
  */
 
-#ifndef _GLIBCXX_MATH
-#define _GLIBCXX_MATH 1
+#ifndef _GLIBCXX_EXT_MATH
+#define _GLIBCXX_EXT_MATH 1
 
 #pragma GCC system_header
 
 //#if __cplusplus > 201703L
 #if __cplusplus >= 201703L
 
-#include <math_const.h>
+#include <ext/math_const.h>
 
 #endif // C++17
 //#endif // C++2a
 
-#endif // _GLIBCXX_MATH
+#endif // _GLIBCXX_EXT_MATH

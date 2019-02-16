@@ -31,7 +31,8 @@
 
 #pragma GCC system_header
 
-#if __cplusplus > 201703L
+//#if __cplusplus > 201703L
+#if __cplusplus >= 201703L
 
 namespace std //_GLIBCXX_VISIBILITY(default)
 {
@@ -298,6 +299,7 @@ namespace math
 } // namespace math
 } // namespace std
 
-#endif // C++2a
+#endif // C++17
+//#endif // C++2a
 
 #endif // _GLIBCXX_MATH_CONST_H

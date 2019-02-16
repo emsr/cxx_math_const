@@ -31,10 +31,12 @@
 
 #pragma GCC system_header
 
-#if __cplusplus > 201703L
+//#if __cplusplus > 201703L
+#if __cplusplus >= 201703L
 
 #include "math_const.h"
 
-#endif // C++2a
+#endif // C++17
+//#endif // C++2a
 
 #endif // _GLIBCXX_MATH

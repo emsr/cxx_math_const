@@ -125,12 +125,12 @@ namespace constants
   // Constant: radians to degree conversion.
   template<typename _Tp>
     inline constexpr _Tp
-    __deg_v            = _Tp{_Tp{180} / __pi;
+    __deg_v            = _Tp{180} / __pi_v<_Tp>;
 
   // Constant: degree to radians conversion.
   template<typename _Tp>
     inline constexpr _Tp
-    __rad_v            = _Tp{__pi / _Tp{180};
+    __rad_v            = __pi_v<_Tp> / _Tp{180};
 
   // Constant Euler's number @f$ e @f$.
   template<typename _Tp>

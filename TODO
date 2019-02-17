@@ -1,6 +1,11 @@
-https://raw.githubusercontent.com/KhronosGroup/libclcxx/master/include/opencl_math_constants
+# C++ Math Constants
 
-1. [] Implement Lev's ideas.
+/emsr/cxx_math_const.svg?branch=master)](https://travis-ci.org/emsr/cxx_math_const)
+Implement standard and Gnu extension math constants.
+The OpenGL folks have [ideas about C++ constants](https://raw.githubusercontent.com/KhronosGroup/libclcxx/master/include/opencl_math_constants).
+
+##Goals and Ideas:
+1. [x] Implement Lev's ideas.
 
 2. [] Comment OEIS everywhere if available and findable.
 

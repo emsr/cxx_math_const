@@ -13,7 +13,7 @@ template<typename Real>
 int
 main()
 {
-  using namespace std::constants;
+  using namespace __gnu_cxx::constants;
   auto foo = math_constants<double>::__pi;
 }
 

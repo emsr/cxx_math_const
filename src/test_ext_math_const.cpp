@@ -37,9 +37,9 @@ template<typename _Tp, typename _Flt>
 int
 main()
 {
-  using namespace std::math;
+  using namespace __gnu_cxx::math;
 
-  auto pi = std::math::pi_v<std::complex<double>>;
+  auto pi = __pi_v<std::complex<double>>;
   std::cout << pi << '\n';
 }
 

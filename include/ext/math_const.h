@@ -32,9 +32,9 @@
 #include <type_traits>
 #include <limits>
 
-namespace std
+namespace __gnu_cxx
 {
-namespace constants
+namespace math
 {
 
   // Constant @f$ 4\pi @f$.
@@ -562,7 +562,7 @@ namespace constants
   __one_div_root_2l   = __one_div_root_2_v<long double>;
 
 
-} // namespace constants
-} // namespace std
+} // namespace math
+} // namespace __gnu_cxx
 
 #endif // _GLIBCXX_EXT_MATH_CONST_H

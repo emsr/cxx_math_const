@@ -1,2 +1,5 @@
-cmake
+#! /bin/bash
+
+cmake .
+
 make

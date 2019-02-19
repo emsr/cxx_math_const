@@ -26,369 +26,543 @@
  *  This file is a GNU extension to the Standard C++ Library.
  */
 
-#ifndef _EXT_MATH_CONST_H
-#define _EXT_MATH_CONST_H 1
+#ifndef _GLIBCXX_EXT_MATH_CONST_H
+#define _GLIBCXX_EXT_MATH_CONST_H 1
 
 #include <type_traits>
 #include <limits>
 
-namespace std
+namespace __gnu_cxx
 {
-namespace constants
+namespace math
 {
 
-  // A class for math constants.
-  template<typename _Real>
-    struct math_constants
-    {
-      static_assert(std::is_floating_point<_Real>::value,
-		    "template argument not a floating point type");
+  // Constant @f$ 4\pi @f$.
+  template<typename _Tp>
+    inline static constexpr _Tp
+    __4_pi_v           = _Tp{12.566'37061'43591'72953'85057'35331'18011'53678L};
 
-      // Constant @f$ 4\pi @f$.
-      inline static constexpr _Real __4_pi
-	= 12.56637061435917295385057353311801153678L;
-      // Constant @f$ 4\pi/3 @f$.
-      inline static constexpr _Real __4_pi_div_3
-	= 4.188790204786390984616857844372670512253L;
-      // Constant @f$ 2\pi @f$.
-      inline static constexpr _Real __2_pi
-	= 6.283185307179586476925286766559005768391L;
-      // Constant @f$ \pi @f$.
-      inline static constexpr _Real __pi
-	= 3.141592653589793238462643383279502884195L;
-      // Constant @f$ \pi / 2 @f$.
-      inline static constexpr _Real __pi_half
-	= 1.570796326794896619231321691639751442098L;
-      // Constant @f$ \pi / 3 @f$.
-      inline static constexpr _Real __pi_third
-	= 1.047197551196597746154214461093167628063L;
-      // Constant @f$ \pi / 4 @f$.
-      inline static constexpr _Real __pi_quarter
-	= 0.785398163397448309615660845819875721049L;
-      // Constant @f$ \sqrt(\pi) @f$.
-      inline static constexpr _Real __root_pi
-	= 1.772453850905516027298167483341145182798L;
-      // Constant @f$ \cbrt(\pi) @f$.
-      inline static constexpr _Real __cbrt_pi
-	= 1.464591887561523263020142527263790391736L;
-      // Constant @f$ \sqrt(\pi / 2) @f$.
-      inline static constexpr _Real __root_pi_div_2
-	= 1.253314137315500251207882642405522626505L;
-      // Constant @f$ 1 / \pi @f$.
-      inline static constexpr _Real __one_div_pi
-	= 0.318309886183790671537767526745028724069L;
-      // Constant @f$ 1 / 2\pi @f$.
-      inline static constexpr _Real __one_div_2_pi
-	= 0.1591549430918953357688837633725143620346L;
-      // Constant @f$ 2 / \pi @f$.
-      inline static constexpr _Real __two_div_pi
-	= 0.636619772367581343075535053490057448138L;
-      // Constant @f$ 2 / \sqrt(\pi) @f$.
-      inline static constexpr _Real __two_div_root_pi
-	= 1.128379167095512573896158903121545171688L;
-      // Constant: @f$ \pi^2/6 @f$.
-      inline static constexpr _Real __pi_sqr_div_6
-	= 1.644934066848226436472415166646025189221L;
-      // Constant: @f$ \sqrt{2\pi}
-      inline static constexpr _Real __root_2_pi
-        = 2.506628274631000502415765284811045253010L;
-      // Constant: @f$ \log(\sqrt{2\pi})
-      inline static constexpr _Real __ln_root_2_pi
-        = 0.918938533204672741780329736405617639862L;
-      // Constant: radians to degree conversion.
-      inline static constexpr _Real __deg
-	= _Real{180} / __pi;
-      // Constant: degree to radians conversion.
-      inline static constexpr _Real __rad
-	= __pi / _Real{180};
-      // Constant Euler's number @f$ e @f$.
-      inline static constexpr _Real __e
-	= 2.718281828459045235360287471352662497759L;
-      // Constant @f$ 1 / e @f$.
-      inline static constexpr _Real __one_div_e
-	= 0.367879441171442321595523770161460867446L;
-      // Constant @f$ \log_2(e) @f$.
-      inline static constexpr _Real __log2_e
-	= 1.442695040888963407359924681001892137427L;
-      // Constant @f$ \log_10(e) @f$.
-      inline static constexpr _Real __log10_e
-	= 0.434294481903251827651128918916605082294L;
-      // Constant @f$ \ln(2) @f$.
-      inline static constexpr _Real __ln_2
-	= 0.693147180559945309417232121458176568075L;
-      // Constant @f$ \ln(3) @f$.
-      inline static constexpr _Real __ln_3
-	= 1.098612288668109691395245236922525704648L;
-      // Constant @f$ \ln(10) @f$.
-      inline static constexpr _Real __ln_10
-	= 2.302585092994045684017991454684364207602L;
-      // Constant @f$ \log(\pi) @f$.
-      inline static constexpr _Real __ln_pi
-	= 1.144729885849400174143427351353058711646L;
-      // Constant Euler-Mascheroni @f$ \gamma_E @f$.
-      inline static constexpr _Real __gamma_e
-	= 0.577215664901532860606512090082402431043L;
-      // Constant Golden Ratio @f$ \phi @f$.
-      inline static constexpr _Real __phi
-	= 1.618033988749894848204586834365638117720L;
-      // Catalan's constant.
-      inline static constexpr _Real __catalan
-	= 0.915965594177219015054603514932384110773L;
-      // Constant @f$ \sqrt(2) @f$.
-      inline static constexpr _Real __root_2
-	= 1.414213562373095048801688724209698078569L;
-      // Constant @f$ \sqrt(3) @f$.
-      inline static constexpr _Real __root_3
-	= 1.732050807568877293527446341505872366945L;
-      // Constant @f$ \sqrt(3) @f$.
-      inline static constexpr _Real __root_3_div_2
-	= 0.866025403784438646763723170752936183473L;
-      // Constant @f$ \sqrt(5) @f$.
-      inline static constexpr _Real __root_5
-	= 2.236067977499789696409173668731276235440L;
-      // Constant @f$ \sqrt(7) @f$.
-      inline static constexpr _Real __root_7
-	= 2.645751311064590590501615753639260425706L;
-      // Constant @f$ \cbrt(3) @f$.
-      inline static constexpr _Real __cbrt_3
-	= 1.442249570307408382321638310780109588390L;
-      // Constant @f$ 1 / \sqrt(2) @f$.
-      inline static constexpr _Real __one_div_root_2
-	= 0.707106781186547524400844362104849039285L;
-    };
+  // Constant @f$ 4\pi/3 @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __4_pi_div_3_v     = _Tp{4.1887'90204'78639'09846'16857'84437'26705'12253L};
 
-  // The following functions mirror the constants abobe but also
-  // admit generic programming with non-findamental types.
-  // For fundamental types, these constexpr functions return
-  // the appropriate constant above.
-  // Developers of multi-precision types are encouraged to overload
-  // these functions calling multiprecision "constant" functions as
-  // available.
+  // Constant @f$ 2\pi @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __2_pi_v           = _Tp{6.2831'85307'17958'64769'25286'76655'90057'68391L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_4_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__4_pi; }
+  // Constant @f$ \pi @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __pi_v             = _Tp{3.1415'92653'58979'32384'62643'38327'95028'84195L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_4_pi_div_3(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__4_pi_div_3; }
+  // Constant @f$ \pi / 2 @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __pi_half_v        = _Tp{1.5707'96326'79489'66192'31321'69163'97514'42098L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_2_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__2_pi; }
+  // Constant @f$ \pi / 3 @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __pi_third_v       = _Tp{1.0471'97551'19659'77461'54214'46109'31676'28063L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__pi; }
+  // Constant @f$ \pi / 4 @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __pi_quarter_v     = _Tp{0.7853'98163'39744'83096'15660'84581'98757'21049L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_pi_half(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__pi_half; }
+  // Constant @f$ \sqrt(\pi) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __root_pi_v        = _Tp{1.7724'53850'90551'60272'98167'48334'11451'82798L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_pi_third(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__pi_third; }
+  // Constant @f$ \cbrt(\pi) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __cbrt_pi_v        = _Tp{1.4645'91887'56152'32630'20142'52726'37903'91736L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_pi_quarter(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__pi_quarter; }
+  // Constant @f$ \sqrt(\pi / 2) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __root_pi_div_2_v  = _Tp{1.2533'14137'31550'02512'07882'64240'55226'26505L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_root_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__root_pi; }
+  // Constant @f$ 1 / \pi @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __one_div_pi_v     = _Tp{0.3183'09886'18379'06715'37767'52674'50287'24069L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_cbrt_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__cbrt_pi; }
+  // Constant @f$ 1 / 2\pi @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __one_div_2_pi_v   = _Tp{0.1591'54943'09189'53357'68883'76337'25143'62035L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_root_pi_div_2(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__root_pi_div_2; }
+  // Constant @f$ 2 / \pi @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __two_div_pi_v     = _Tp{0.6366'19772'36758'13430'75535'05349'00574'48138L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_one_div_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__one_div_pi; }
+  // Constant @f$ 2 / \sqrt(\pi) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __two_div_root_pi_v= _Tp{1.1283'79167'09551'25738'96158'90312'15451'71688L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_one_div_2_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__one_div_2_pi; }
+  // Constant: @f$ \pi^2/6 @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __pi_sqr_div_6_v   = _Tp{1.6449'34066'84822'64364'72415'16664'60251'89221L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_two_div_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__two_div_pi; }
+  // Constant: @f$ \sqrt{2\pi}
+  template<typename _Tp>
+    inline constexpr _Tp
+    __root_2_pi_v      = _Tp{2.5066'28274'63100'05024'15765'28481'10452'53010L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_two_div_root_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__two_div_root_pi; }
+  // Constant: @f$ \log(\sqrt{2\pi})
+  template<typename _Tp>
+    inline constexpr _Tp
+    __ln_root_2_pi_v   = _Tp{0.9189'38533'20467'27417'80329'73640'56176'39862L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_pi_sqr_div_6(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__pi_sqr_div_6; }
+  // Constant: radians to degree conversion.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __deg_v            = _Tp{180} / __pi_v<_Tp>;
 
-  template<typename _Real>
-    constexpr _Real
-    const_root_2_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__root_2_pi; }
+  // Constant: degree to radians conversion.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __rad_v            = __pi_v<_Tp> / _Tp{180};
 
-  template<typename _Real>
-    constexpr _Real
-    const_ln_root_2_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__ln_root_2_pi; }
+  // Constant Euler's number @f$ e @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __e_v              = _Tp{2.7182'81828'45904'52353'60287'47135'26624'97759L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_deg(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__deg; }
+  // Constant @f$ 1 / e @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __one_div_e_v      = _Tp{0.3678'79441'17144'23215'95523'77016'14608'67446L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_rad(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__rad; }
+  // Constant @f$ \log_2(e) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __log2_e_v         = _Tp{1.4426'95040'88896'34073'59924'68100'18921'37427L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_e(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__e; }
+  // Constant @f$ \log_10(e) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __log10_e_v        = _Tp{0.4342'94481'90325'18276'51128'91891'66050'82294L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_one_div_e(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__one_div_e; }
+  // Constant @f$ \ln(2) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __ln_2_v           = _Tp{0.6931'47180'55994'53094'17232'12145'81765'68075L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_log2_e(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__log2_e; }
+  // Constant @f$ \ln(3) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __ln_3_v           = _Tp{1.0986'12288'66810'96913'95245'23692'25257'04648L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_log10_e(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__log10_e; }
+  // Constant @f$ \ln(10) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __ln_10_v          = _Tp{2.3025'85092'99404'56840'17991'45468'43642'07602L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_ln_2(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__ln_2; }
+  // Constant @f$ \log(\pi) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __ln_pi_v          = _Tp{1.1447'29885'84940'01741'43427'35135'30587'11646L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_ln_3(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__ln_3; }
+  // Constant Euler-Mascheroni @f$ \gamma_E @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __gamma_e_v        = _Tp{0.5772'15664'90153'28606'06512'09008'24024'31043L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_ln_10(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__ln_10; }
+  // Constant Golden Ratio @f$ \phi @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __phi_v            = _Tp{1.6180'33988'74989'48482'04586'83436'56381'17720L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_ln_pi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__ln_pi; }
+  // Catalan's constant.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __catalan_v        = _Tp{0.9159'65594'17721'90150'54603'51493'23841'10773L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_gamma_e(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__gamma_e; }
+  // Constant @f$ \sqrt(2) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __root_2_v         = _Tp{1.4142'13562'37309'50488'01688'72420'96980'78569L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_phi(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__phi; }
+  // Constant @f$ \sqrt(3) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __root_3_v         = _Tp{1.7320'50807'56887'72935'27446'34150'58723'66945L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_catalan(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__catalan; }
+  // Constant @f$ \sqrt(3) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __root_3_div_2_v   = _Tp{0.8660'25403'78443'86467'63723'17075'29361'83473L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_root_2(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__root_2; }
+  // Constant @f$ \sqrt(5) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __root_5_v         = _Tp{2.2360'67977'49978'96964'09173'66873'12762'35440L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_root_3(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__root_3; }
+  // Constant @f$ \sqrt(7) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __root_7_v         = _Tp{2.6457'51311'06459'05905'01615'75363'92604'25706L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_root_3_div_2(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__root_3_div_2; }
+  // Constant @f$ \cbrt(3) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __cbrt_3_v         = _Tp{1.4422'49570'30740'83823'21638'31078'01095'88390L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_root_5(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__root_5; }
+  // Constant @f$ 1 / \sqrt(2) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __one_div_root_2_v = _Tp{0.7071'06781'18654'75244'00844'36210'48490'39285L};
 
-  template<typename _Real>
-    constexpr _Real
-    const_root_7(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__root_7; }
+  // float "specializations"
 
-  template<typename _Real>
-    constexpr _Real
-    const_cbrt_3(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__cbrt_3; }
+  inline constexpr float
+  __4_pif 	      = __4_pi_v<float>;
 
-  template<typename _Real>
-    constexpr _Real
-    const_one_div_root_2(_Real = _Real{})
-    noexcept(noexcept(std::is_fundamental<_Real>::value))
-    { return math_constants<_Real>::__one_div_root_2; }
+  inline constexpr float
+  __4_pi_div_3f       = __4_pi_div_3_v<float>;
+
+  inline constexpr float
+  __2_pif 	      = __2_pi_v<float>;
+
+  inline constexpr float
+  __pif 	      = __pi_v<float>;
+
+  inline constexpr float
+  __pi_halff 	      = __pi_half_v<float>;
+
+  inline constexpr float
+  __pi_thirdf 	      = __pi_third_v<float>;
+
+  inline constexpr float
+  __pi_quarterf       = __pi_quarter_v<float>;
+
+  inline constexpr float
+  __root_pif 	      = __root_pi_v<float>;
+
+  inline constexpr float
+  __cbrt_pif 	      = __cbrt_pi_v<float>;
+
+  inline constexpr float
+  __root_pi_div_2f    = __root_pi_div_2_v<float>;
+
+  inline constexpr float
+  __one_div_pif       = __one_div_pi_v<float>;
+
+  inline constexpr float
+  __one_div_2_pif     = __one_div_2_pi_v<float>;
+
+  inline constexpr float
+  __two_div_pif       = __two_div_pi_v<float>;
+
+  inline constexpr float
+  __two_div_root_pif  = __two_div_root_pi_v<float>;
+
+  inline constexpr float
+  __pi_sqr_div_6f     = __pi_sqr_div_6_v<float>;
+
+  inline constexpr float
+  __root_2_pif        = __root_2_pi_v<float>;
+
+  inline constexpr float
+  __ln_root_2_pif     = __ln_root_2_pi_v<float>;
+
+  inline constexpr float
+  __degf 	      = __deg_v<float>;
+
+  inline constexpr float
+  __radf              = __rad_v<float>;
+
+  inline constexpr float
+  __ef                = __e_v<float>;
+
+  inline constexpr float
+  __one_div_ef        = __one_div_e_v<float>;
+
+  inline constexpr float
+  __log2_ef 	      = __log2_e_v<float>;
+
+  inline constexpr float
+  __log10_ef 	      = __log10_e_v<float>;
+
+  inline constexpr float
+  __ln_2f 	      = __ln_2_v<float>;
+
+  inline constexpr float
+  __ln_3f 	      = __ln_3_v<float>;
+
+  inline constexpr float
+  __ln_10f 	      = __ln_10_v<float>;
+
+  inline constexpr float
+  __ln_pif 	      = __ln_pi_v<float>;
+
+  inline constexpr float
+  __gamma_ef 	      = __gamma_e_v<float>;
+
+  inline constexpr float
+  __phif 	      = __phi_v<float>;
+
+  inline constexpr float
+  __catalanf 	      = __catalan_v<float>;
+
+  inline constexpr float
+  __root_2f 	      = __root_2_v<float>;
+
+  inline constexpr float
+  __root_3f 	      = __root_3_v<float>;
+
+  inline constexpr float
+  __root_3_div_2f     = __root_3_div_2_v<float>;
+
+  inline constexpr float
+  __root_5f 	      = __root_5_v<float>;
+
+  inline constexpr float
+  __root_7f 	      = __root_7_v<float>;
+
+  inline constexpr float
+  __cbrt_3f 	      = __cbrt_3_v<float>;
+
+  inline constexpr float
+  __one_div_root_2f   = __one_div_root_2_v<float>;
+
+  // double "specializations"
+
+  inline constexpr double
+  __4_pi  	      = __4_pi_v<double>;
+
+  inline constexpr double
+  __4_pi_div_3        = __4_pi_div_3_v<double>;
+
+  inline constexpr double
+  __2_pi  	      = __2_pi_v<double>;
+
+  inline constexpr double
+  __pi  	      = __pi_v<double>;
+
+  inline constexpr double
+  __pi_half  	      = __pi_half_v<double>;
+
+  inline constexpr double
+  __pi_third  	      = __pi_third_v<double>;
+
+  inline constexpr double
+  __pi_quarter        = __pi_quarter_v<double>;
+
+  inline constexpr double
+  __root_pi  	      = __root_pi_v<double>;
+
+  inline constexpr double
+  __cbrt_pi  	      = __cbrt_pi_v<double>;
+
+  inline constexpr double
+  __root_pi_div_2     = __root_pi_div_2_v<double>;
+
+  inline constexpr double
+  __one_div_pi        = __one_div_pi_v<double>;
+
+  inline constexpr double
+  __one_div_2_pi      = __one_div_2_pi_v<double>;
+
+  inline constexpr double
+  __two_div_pi        = __two_div_pi_v<double>;
+
+  inline constexpr double
+  __two_div_root_pi   = __two_div_root_pi_v<double>;
+
+  inline constexpr double
+  __pi_sqr_div_6      = __pi_sqr_div_6_v<double>;
+
+  inline constexpr double
+  __root_2_pi         = __root_2_pi_v<double>;
+
+  inline constexpr double
+  __ln_root_2_pi      = __ln_root_2_pi_v<double>;
+
+  inline constexpr double
+  __deg  	      = __deg_v<double>;
+
+  inline constexpr double
+  __rad               = __rad_v<double>;
+
+  inline constexpr double
+  __e                 = __e_v<double>;
+
+  inline constexpr double
+  __one_div_e         = __one_div_e_v<double>;
+
+  inline constexpr double
+  __log2_e  	      = __log2_e_v<double>;
+
+  inline constexpr double
+  __log10_e  	      = __log10_e_v<double>;
+
+  inline constexpr double
+  __ln_2  	      = __ln_2_v<double>;
+
+  inline constexpr double
+  __ln_3  	      = __ln_3_v<double>;
+
+  inline constexpr double
+  __ln_10  	      = __ln_10_v<double>;
+
+  inline constexpr double
+  __ln_pi  	      = __ln_pi_v<double>;
+
+  inline constexpr double
+  __gamma_e  	      = __gamma_e_v<double>;
+
+  inline constexpr double
+  __phi  	      = __phi_v<double>;
+
+  inline constexpr double
+  __catalan  	      = __catalan_v<double>;
+
+  inline constexpr double
+  __root_2  	      = __root_2_v<double>;
+
+  inline constexpr double
+  __root_3  	      = __root_3_v<double>;
+
+  inline constexpr double
+  __root_3_div_2      = __root_3_div_2_v<double>;
+
+  inline constexpr double
+  __root_5  	      = __root_5_v<double>;
+
+  inline constexpr double
+  __root_7  	      = __root_7_v<double>;
+
+  inline constexpr double
+  __cbrt_3  	      = __cbrt_3_v<double>;
+
+  inline constexpr double
+  __one_div_root_2    = __one_div_root_2_v<double>;
+
+  // long double "specializations"
+
+  inline constexpr long double
+  __4_pil 	      = __4_pi_v<long double>;
+
+  inline constexpr long double
+  __4_pi_div_3l       = __4_pi_div_3_v<long double>;
+
+  inline constexpr long double
+  __2_pil 	      = __2_pi_v<long double>;
+
+  inline constexpr long double
+  __pil 	      = __pi_v<long double>;
+
+  inline constexpr long double
+  __pi_halfl 	      = __pi_half_v<long double>;
+
+  inline constexpr long double
+  __pi_thirdl 	      = __pi_third_v<long double>;
+
+  inline constexpr long double
+  __pi_quarterl       = __pi_quarter_v<long double>;
+
+  inline constexpr long double
+  __root_pil 	      = __root_pi_v<long double>;
+
+  inline constexpr long double
+  __cbrt_pil 	      = __cbrt_pi_v<long double>;
+
+  inline constexpr long double
+  __root_pi_div_2l    = __root_pi_div_2_v<long double>;
+
+  inline constexpr long double
+  __one_div_pil       = __one_div_pi_v<long double>;
+
+  inline constexpr long double
+  __one_div_2_pil     = __one_div_2_pi_v<long double>;
+
+  inline constexpr long double
+  __two_div_pil       = __two_div_pi_v<long double>;
+
+  inline constexpr long double
+  __two_div_root_pil  = __two_div_root_pi_v<long double>;
+
+  inline constexpr long double
+  __pi_sqr_div_6l     = __pi_sqr_div_6_v<long double>;
+
+  inline constexpr long double
+  __root_2_pil        = __root_2_pi_v<long double>;
+
+  inline constexpr long double
+  __ln_root_2_pil     = __ln_root_2_pi_v<long double>;
+
+  inline constexpr long double
+  __degl 	      = __deg_v<long double>;
+
+  inline constexpr long double
+  __radl              = __rad_v<long double>;
+
+  inline constexpr long double
+  __el                = __e_v<long double>;
+
+  inline constexpr long double
+  __one_div_el        = __one_div_e_v<long double>;
+
+  inline constexpr long double
+  __log2_el 	      = __log2_e_v<long double>;
+
+  inline constexpr long double
+  __log10_el 	      = __log10_e_v<long double>;
+
+  inline constexpr long double
+  __ln_2l 	      = __ln_2_v<long double>;
+
+  inline constexpr long double
+  __ln_3l 	      = __ln_3_v<long double>;
+
+  inline constexpr long double
+  __ln_10l 	      = __ln_10_v<long double>;
+
+  inline constexpr long double
+  __ln_pil 	      = __ln_pi_v<long double>;
+
+  inline constexpr long double
+  __gamma_el 	      = __gamma_e_v<long double>;
+
+  inline constexpr long double
+  __phil 	      = __phi_v<long double>;
+
+  inline constexpr long double
+  __catalanl 	      = __catalan_v<long double>;
+
+  inline constexpr long double
+  __root_2l 	      = __root_2_v<long double>;
+
+  inline constexpr long double
+  __root_3l 	      = __root_3_v<long double>;
+
+  inline constexpr long double
+  __root_3_div_2l     = __root_3_div_2_v<long double>;
+
+  inline constexpr long double
+  __root_5l 	      = __root_5_v<long double>;
+
+  inline constexpr long double
+  __root_7l 	      = __root_7_v<long double>;
+
+  inline constexpr long double
+  __cbrt_3l 	      = __cbrt_3_v<long double>;
+
+  inline constexpr long double
+  __one_div_root_2l   = __one_div_root_2_v<long double>;
 
 
-} // namespace constants
-} // namespace std
+} // namespace math
+} // namespace __gnu_cxx
 
-#endif // _EXT_MATH_CONST_H
+#endif // _GLIBCXX_EXT_MATH_CONST_H

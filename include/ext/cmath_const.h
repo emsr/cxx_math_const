@@ -30,7 +30,6 @@
 #define _GLIBCXX_EXT_CMATH_CONST_H 1
 
 #include <type_traits>
-#include <limits>
 
 namespace __gnu_cxx
 {
@@ -157,7 +156,7 @@ namespace constants
 	= 0.707106781186547524400844362104849039285L;
     };
 
-  // The following functions mirror the constants abobe but also
+  // The following functions mirror the constants above but also
   // admit generic programming with non-fundamental types.
   // For fundamental types, these constexpr functions return
   // the appropriate constant above.

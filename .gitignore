@@ -1,3 +1,15 @@
+
+test_cmath_const
+test_ext_cmath_const
+test_ext_math_const
+test_math_const
+
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+
+
 # Compiled Object files
 *.slo
 *.lo

@@ -1,6 +1,6 @@
 // Math extensions -*- C++ -*-
 
-// Copyright (C) 2013-2017 Free Software Foundation, Inc.
+// Copyright (C) 2013-2019 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -29,8 +29,9 @@
 #ifndef _GLIBCXX_EXT_MATH_CONST_H
 #define _GLIBCXX_EXT_MATH_CONST_H 1
 
-#include <type_traits>
-#include <limits>
+#pragma GCC system_header
+
+#if __cplusplus >= 201703L
 
 namespace __gnu_cxx
 {
@@ -561,8 +562,9 @@ namespace math
   inline constexpr long double
   __one_div_root_2l   = __one_div_root_2_v<long double>;
 
-
 } // namespace math
 } // namespace __gnu_cxx
+
+#endif // C++17
 
 #endif // _GLIBCXX_EXT_MATH_CONST_H

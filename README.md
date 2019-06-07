@@ -9,9 +9,6 @@ The main effort now is to follow the effort in
 
 The file math_const.h implements the latest version of that paper.
 
-The files cmath_variable_template and cmath_const.h were earlier, similar thoughts of my own.
-
-
 ## New ideas:
 
 There are several directions this could go once the basics are in place.

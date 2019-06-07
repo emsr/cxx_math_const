@@ -1,6 +1,4 @@
 
-test_cmath_const
-test_ext_cmath_const
 test_ext_math_const
 test_math_const
 
@@ -9,36 +7,3 @@ CMakeFiles/
 Makefile
 cmake_install.cmake
 
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Local stuff
-bin/

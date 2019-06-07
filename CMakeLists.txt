@@ -13,12 +13,6 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(test_math_const src/test_math_const.cpp)
 target_include_directories(test_math_const PRIVATE include)
 
-add_executable(test_cmath_const src/test_cmath_const.cpp)
-target_include_directories(test_cmath_const PRIVATE include)
-
 add_executable(test_ext_math_const src/test_ext_math_const.cpp)
 target_include_directories(test_ext_math_const PRIVATE include)
-
-add_executable(test_ext_cmath_const src/test_ext_cmath_const.cpp)
-target_include_directories(test_ext_cmath_const PRIVATE include)
 

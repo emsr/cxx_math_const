@@ -1,9 +1,12 @@
 
-test_ext_math_const
-test_math_const
+bin/
 
 CMakeCache.txt
 CMakeFiles/
 Makefile
 cmake_install.cmake
-
+CMakeDoxygenDefaults.cmake
+CMakeDoxyfile.in
+CMakeLists.txt
+CTestTestfile.cmake
+Testing/

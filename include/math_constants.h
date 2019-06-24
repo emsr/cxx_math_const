@@ -119,65 +119,6 @@ namespace math
     inline constexpr _Tp
     phi_v         = _Tp{1.6180'33988'74989'48482'04586'83436'56381'17720e+0L};
 
-  // float "specializations"
-
-  /// The \c float version of the Euler constant @f$ e = 2.71828... @f$
-  inline constexpr float
-  ef = e_v<float>;
-
-  /// The \c float version of the base-2 logarithm of the Euler constant
-  /// @f$ log_2(e) @f$
-  inline constexpr float
-  log2ef = log2e_v<float>;
-
-  /// The \c float version of the base-10 logarithm of the Euler constant
-  /// @f$ log_{10}(e) @f$
-  inline constexpr float
-  log10ef = log10e_v<float>;
-
-  /// The \c float version of the Archimedean constant @f$ \pi = 3.1415... @f$
-  inline constexpr float
-  pif = pi_v<float>;
-
-  /// The \c float version of the reciprocal of Archimedes' constant
-  /// @f$ 1/\pi @f$
-  inline constexpr float
-  inv_pif = inv_pi_v<float>;
-
-  /// The \c float version of the reciprocal square root
-  /// of Archimedes' constant @f$ 1/\sqrt{\pi} @f$
-  inline constexpr float
-  inv_sqrtpif = inv_sqrtpi_v<float>;
-
-  /// The \c float version of the Napierian logarithm of 2 @f$ ln(2) @f$
-  inline constexpr float
-  ln2f = ln2_v<float>;
-
-  /// The \c float version of the Napierian logarithm of 10 @f$ ln(10) @f$
-  inline constexpr float
-  ln10f = ln10_v<float>;
-
-  /// The \c float version of the square root of 2 @f$ \sqrt{2} @f$
-  inline constexpr float
-  sqrt2f = sqrt2_v<float>;
-
-  /// The \c float version of the square root of 3 @f$ \sqrt{3} @f$
-  inline constexpr float
-  sqrt3f = sqrt3_v<float>;
-
-  /// The \c float version of the reciprocal square root of 3
-  /// @f$ 1 / \sqrt{3} @f$
-  inline constexpr float
-  inv_sqrt3f = inv_sqrt3_v<float>;
-
-  /// The \c float version of the Euler-Mascheroni constant @f$ \gamma_E @f$
-  inline constexpr float
-  egammaf = egamma_v<float>;
-
-  /// The \c float version of the golden ratio @f$ \phi = (\sqrt{5} + 1)/2 @f$
-  inline constexpr float
-  phif = phi_v<float>;
-
   // double "specializations"
 
   /// The \c double version of the Euler constant @f$ e = 2.71828... @f$
@@ -234,66 +175,6 @@ namespace math
   /// The \c double version of the golden ratio @f$ \phi = (\sqrt{5} + 1)/2 @f$
   inline constexpr double
   phi = phi_v<double>;
-
-  // long double "specializations"
-
-  /// The \c long double version of the Euler constant @f$ e = 2.71828... @f$
-  inline constexpr long double
-  el = e_v<long double>;
-
-  /// The \c long double version of the base-2 logarithm of the Euler constant
-  inline constexpr long double
-  log2el = log2e_v<long double>;
-
-  /// The \c long double version of the base-10 logarithm of the Euler constant
-  inline constexpr long double
-  log10el = log10e_v<long double>;
-
-  /// The \c long double version of the Archimedean constant
-  /// @f$ \pi = 3.1415... @f$
-  inline constexpr long double
-  pil = pi_v<long double>;
-
-  /// The \c long double version of the reciprocal of Archimedes' constant
-  /// @f$ 1/\pi @f$
-  inline constexpr long double
-  inv_pil = inv_pi_v<long double>;
-
-  /// The \c long double version of the reciprocal square root of Archimedes'
-  /// constant @f$ 1/\sqrt{\pi} @f$
-  inline constexpr long double
-  inv_sqrtpil = inv_sqrtpi_v<long double>;
-
-  /// The \c long double version of the Napierian logarithm of 2 @f$ ln(2) @f$
-  inline constexpr long double
-  ln2l = ln2_v<long double>;
-
-  /// The \c long double version of the Napierian logarithm of 10 @f$ ln(10) @f$
-  inline constexpr long double
-  ln10l = ln10_v<long double>;
-
-  /// The \c long double version of the square root of 2 @f$ \sqrt{2} @f$
-  inline constexpr long double
-  sqrt2l = sqrt2_v<long double>;
-
-  /// The \c long double version of the square root of 3 @f$ \sqrt{3} @f$
-  inline constexpr long double
-  sqrt3l = sqrt3_v<long double>;
-
-  /// The \c long double version of the reciprocal square root of 3
-  /// @f$ 1 / \sqrt{3} @f$
-  inline constexpr long double
-  inv_sqrt3l = inv_sqrt3_v<long double>;
-
-  /// The \c long double version of the Euler-Mascheroni constant
-  /// @f$ \gamma_E @f$
-  inline constexpr long double
-  egammal = egamma_v<long double>;
-
-  /// The \c long double version of the golden ratio
-  /// @f$ \phi = (\sqrt{5} + 1)/2 @f$
-  inline constexpr long double
-  phil = phi_v<long double>;
 
 //_GLIBCXX_END_NAMESPACE_VERSION
 } // namespace math

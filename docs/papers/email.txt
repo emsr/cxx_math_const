@@ -1,0 +1,28 @@
+
+All,
+ 
+          Thank you very much for your very helpful feedback for our paper. As several participants pointed out, in San Diego LEWG held a series of votes on it, recorded as:
+>> 
+special short double names
+7 5 4 1 1
+add'l short float, long double?
+0 2 7 4 2
+drop float and long double constant names, move to ns of authors choice num vs. mat, move to LWG for C++20
+1 9 6 1 1
+<< 
+           Given your input, I now interpret these votes as:
+>> 
+
+    Define double constants such as std::math::pi - YES
+    Define float and long double constants such as std::math::pif - NO
+    Move to namespace of authors choice num vs. mat - YES
+    Move to LWG for C++20 - YES
+
+<< 
+        As the result of 2), I removed float and long double constants from the proposal and asked Daniel Krügler to upload the updated draft to the Wiki page.
+ 
+        Perhaps with these changes, we can mark the paper as \u201cTentatively Ready\u201d?
+ 
+
+    Lev Minkovsky      
+

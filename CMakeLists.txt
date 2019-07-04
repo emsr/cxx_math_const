@@ -30,6 +30,12 @@ add_executable(test_ext_math_const src/test_ext_math_const.cpp)
 target_link_libraries(test_ext_math_const cxx_math_constants)
 add_test(NAME run_test_ext_math_const COMMAND bash -c "./bin/test_ext_math_const > output/test_ext_math_const.txt")
 
+add_executable(test_math_const_float128 src/test_math_const_float128.cpp)
+target_include_directories(test_math_const_float128
+   PRIVATE ../tr29124_test/include ../tr29124_test/cxx_complex_utils/include ../tr29124_test/cxx_fp_utils/include)
+target_link_libraries(test_math_const_float128 cxx_math_constants quadmath)
+add_test(NAME run_test_math_const_float128 COMMAND bash -c "./bin/test_math_const_float128 > output/test_math_const_float128.txt")
+
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
   add_custom_target(docs

@@ -32,7 +32,7 @@ add_test(NAME run_test_ext_math_const COMMAND bash -c "./bin/test_ext_math_const
 
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
-  add_custom_target(docs
+  add_custom_target(docs_math_constants
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/docs
     COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUTPUT}
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}

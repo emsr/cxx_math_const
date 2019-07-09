@@ -26,8 +26,8 @@
  *  This file is a GNU extension to the Standard C++ Library.
  */
 
-#ifndef _GLIBCXX_EXT_MATH_CONST_H
-#define _GLIBCXX_EXT_MATH_CONST_H 1
+#ifndef _EXT_MATH_CONSTANTS_H
+#define _EXT_MATH_CONSTANTS_H 1
 
 #pragma GCC system_header
 
@@ -37,6 +37,7 @@ namespace __gnu_cxx
 {
 namespace math
 {
+//_GLIBCXX_BEGIN_NAMESPACE_VERSION
 
   // Constant @f$ 4\pi @f$.
   template<typename _Tp>
@@ -336,9 +337,10 @@ namespace math
   inline constexpr double
   __one_div_root_2    = __one_div_root_2_v<double>;
 
+//_GLIBCXX_END_NAMESPACE_VERSION
 } // namespace math
 } // namespace __gnu_cxx
 
 #endif // C++17
 
-#endif // _GLIBCXX_EXT_MATH_CONST_H
+#endif // _EXT_MATH_CONSTANTS_H

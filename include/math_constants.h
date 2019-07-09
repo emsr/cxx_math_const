@@ -26,8 +26,8 @@
  *  This is a Standard C++ Library header.
  */
 
-#ifndef _GLIBCXX_MATH_CONST_H
-#define _GLIBCXX_MATH_CONST_H 1
+#ifndef _MATH_CONSTANTS_H
+#define _MATH_CONSTANTS_H 1
 
 #pragma GCC system_header
 
@@ -185,4 +185,4 @@ namespace math
 #endif // C++17
 //#endif // C++2a
 
-#endif // _GLIBCXX_MATH_CONST_H
+#endif // _MATH_CONSTANTS_H

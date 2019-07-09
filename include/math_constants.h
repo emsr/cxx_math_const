@@ -34,6 +34,8 @@
 //#if __cplusplus > 201703L
 #if __cplusplus >= 201703L
 
+#define __cpp_lib_math_constants 201905L
+
 namespace std //_GLIBCXX_VISIBILITY(default)
 {
 namespace math

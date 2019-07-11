@@ -28,7 +28,7 @@ target_include_directories(test_math_constants PRIVATE
   ../cxx_complex_utils/include # ../include/complex needs this.
   ../cxx_fp_utils/include # then this...
   ../include
-  ../../3rdparty/mpreal)
+  ../3rdparty/mpreal)
 target_link_libraries(test_math_constants cxx_math_constants quadmath mpfr gmp)
 add_test(NAME run_test_math_constants COMMAND bash -c "./bin/test_math_constants > output/test_math_constants.txt")
 

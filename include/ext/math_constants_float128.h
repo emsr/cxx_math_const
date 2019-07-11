@@ -22,12 +22,12 @@
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file ext/math_const.h
+/** @file include/ext/math_constants_float128.h
  *  This file is a GNU extension to the Standard C++ Library.
  */
 
-#ifndef _GLIBCXX_EXT_MATH_CONST_H
-#define _GLIBCXX_EXT_MATH_CONST_H 1
+#ifndef _EXT_MATH_CONSTANTS_FLOAT128_H
+#define _EXT_MATH_CONSTANTS_FLOAT128_H 1
 
 #pragma GCC system_header
 
@@ -271,4 +271,4 @@ namespace math
 
 #endif // C++17
 
-#endif // _GLIBCXX_EXT_MATH_CONST_H
+#endif // _EXT_MATH_CONSTANTS_FLOAT128_H

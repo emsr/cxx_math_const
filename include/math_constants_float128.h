@@ -1,4 +1,4 @@
-// <math_const.h> -*- C++ -*-
+// <math_constants_float128.h> -*- C++ -*-
 
 // Copyright (C) 2019 Free Software Foundation, Inc.
 //
@@ -22,12 +22,12 @@
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/math_const.h
+/** @file include/math_constants_float128.h
  *  This is a Standard C++ Library header.
  */
 
-#ifndef _GLIBCXX_MATH_CONST_H
-#define _GLIBCXX_MATH_CONST_H 1
+#ifndef _MATH_CONSTANTS_FLOAT128_H
+#define _MATH_CONSTANTS_FLOAT128_H 1
 
 #pragma GCC system_header
 
@@ -141,4 +141,4 @@ namespace math
 #endif // C++17
 //#endif // C++2a
 
-#endif // _GLIBCXX_MATH_CONST_H
+#endif // _MATH_CONSTANTS_FLOAT128_H

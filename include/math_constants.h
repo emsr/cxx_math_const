@@ -1,4 +1,4 @@
-// <math_const.h> -*- C++ -*-
+// <math_constants.h> -*- C++ -*-
 
 // Copyright (C) 2019 Free Software Foundation, Inc.
 //
@@ -22,7 +22,7 @@
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file include/math_const.h
+/** @file include/math_constants.h
  *  This is a Standard C++ Library header.
  */
 

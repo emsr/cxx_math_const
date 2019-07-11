@@ -22,7 +22,7 @@
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file ext/math_constants_mpreal.h
+/** @file include/ext/math_constants_mpreal.h
  *  This file is a GNU extension to the Standard C++ Library.
  */
 

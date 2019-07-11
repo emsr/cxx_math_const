@@ -22,7 +22,7 @@
 // see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
-/** @file ext/math_const.h
+/** @file include/ext/math_constants.h
  *  This file is a GNU extension to the Standard C++ Library.
  */
 

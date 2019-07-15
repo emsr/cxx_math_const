@@ -33,8 +33,6 @@
 
 //#if __cplusplus > 201703L
 #if __cplusplus >= 201703L
-# include <bits/c++0x_warning.h>
-#else
 
 namespace std //_GLIBCXX_VISIBILITY(default)
 {

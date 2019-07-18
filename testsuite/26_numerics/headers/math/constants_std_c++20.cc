@@ -61,19 +61,19 @@ namespace gnu
   template<typename _Tp>
     auto phi        = std::math::phi_v<_Tp>;
 
-  auto ef          = std::math::ef;
-  auto log2ef      = std::math::log2ef;
-  auto log10ef     = std::math::log10ef;
-  auto pif         = std::math::pif;
-  auto inv_pif     = std::math::inv_pif;
-  auto inv_sqrtpif = std::math::inv_sqrtpif;
-  auto ln2f        = std::math::ln2f;
-  auto ln10f       = std::math::ln10f;
-  auto sqrt2f      = std::math::sqrt2f;
-  auto sqrt3f      = std::math::sqrt3f;
-  auto inv_sqrt3f  = std::math::inv_sqrt3f;
-  auto egammaf     = std::math::egammaf;
-  auto phif        = std::math::phif;
+  auto ef          = std::math::e_v<float>;
+  auto log2ef      = std::math::log2e_v<float>;
+  auto log10ef     = std::math::log10e_v<float>;
+  auto pif         = std::math::pi_v<float>;
+  auto inv_pif     = std::math::inv_pi_v<float>;
+  auto inv_sqrtpif = std::math::inv_sqrtpi_v<float>;
+  auto ln2f        = std::math::ln2_v<float>;
+  auto ln10f       = std::math::ln10_v<float>;
+  auto sqrt2f      = std::math::sqrt2_v<float>;
+  auto sqrt3f      = std::math::sqrt3_v<float>;
+  auto inv_sqrt3f  = std::math::inv_sqrt3_v<float>;
+  auto egammaf     = std::math::egamma_v<float>;
+  auto phif        = std::math::phi_v<float>;
 
   auto ed          = std::math::e;
   auto log2ed      = std::math::log2e;
@@ -89,17 +89,17 @@ namespace gnu
   auto egammad     = std::math::egamma;
   auto phid        = std::math::phi;
 
-  auto el          = std::math::el;
-  auto log2el      = std::math::log2el;
-  auto log10el     = std::math::log10el;
-  auto pil         = std::math::pil;
-  auto inv_pil     = std::math::inv_pil;
-  auto inv_sqrtpil = std::math::inv_sqrtpil;
-  auto ln2l        = std::math::ln2l;
-  auto ln10l       = std::math::ln10l;
-  auto sqrt2l      = std::math::sqrt2l;
-  auto sqrt3l      = std::math::sqrt3l;
-  auto inv_sqrt3l  = std::math::inv_sqrt3l;
-  auto egammal     = std::math::egammal;
-  auto phil        = std::math::phil;
+  auto el          = std::math::e_v<long double>;
+  auto log2el      = std::math::log2e_v<long double>;
+  auto log10el     = std::math::log10e_v<long double>;
+  auto pil         = std::math::pi_v<long double>;
+  auto inv_pil     = std::math::inv_pi_v<long double>;
+  auto inv_sqrtpil = std::math::inv_sqrtpi_v<long double>;
+  auto ln2l        = std::math::ln2_v<long double>;
+  auto ln10l       = std::math::ln10_v<long double>;
+  auto sqrt2l      = std::math::sqrt2_v<long double>;
+  auto sqrt3l      = std::math::sqrt3_v<long double>;
+  auto inv_sqrt3l  = std::math::inv_sqrt3_v<long double>;
+  auto egammal     = std::math::egamma_v<long double>;
+  auto phil        = std::math::phi_v<long double>;
 }

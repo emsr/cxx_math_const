@@ -10,7 +10,7 @@ include_directories(include)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -Wno-psabi -Wno-deprecated-declarations -Wold-style-cast")
+set(CMAKE_CXX_FLAGS "-fconcepts -Wall -Wextra -Wno-psabi -Wno-deprecated-declarations -Wold-style-cast")
 
 if (NOT MSVC)
   if (NOT CMAKE_CROSSCOMPILING)
@@ -25,34 +25,27 @@ target_include_directories(cxx_math_constants INTERFACE include)
 
 add_executable(test_math_constants src/test_math_constants.cpp)
 target_include_directories(test_math_constants PRIVATE
-  ../cxx_float128/include
   ../cxx_polynomial/include
   ../cxx_summation/include
   ../cxx_integration/include
   ../cxx_complex_utils/include
   ../cxx_complex_math/include
   ../cxx_fp_utils/include # then this...
-  ../include
-  ../3rdparty/mpreal)
+  ../include)
 target_link_libraries(test_math_constants cxx_math_constants quadmath mpfr gmp)
 add_test(NAME run_test_math_constants COMMAND bash -c "./bin/test_math_constants > output/test_math_constants.txt")
 
-add_executable(test_math_const src/test_math_const.cpp)
-target_link_libraries(test_math_const cxx_math_constants)
-add_test(NAME run_test_math_const COMMAND bash -c "./bin/test_math_const > output/test_math_const.txt")
-
-add_executable(test_ext_math_const src/test_ext_math_const.cpp)
-target_link_libraries(test_ext_math_const cxx_math_constants)
-add_test(NAME run_test_ext_math_const COMMAND bash -c "./bin/test_ext_math_const > output/test_ext_math_const.txt")
-
-add_executable(test_math_const_float128 src/test_math_const_float128.cpp)
-target_include_directories(test_math_const_float128 PRIVATE
-  ../include
+add_executable(test_ext_math_constants src/test_ext_math_constants.cpp)
+target_include_directories(test_ext_math_constants PRIVATE
+  ../cxx_polynomial/include
+  ../cxx_summation/include
+  ../cxx_integration/include
   ../cxx_complex_utils/include
-  ../cxx_fp_utils/include
-  ../cxx_float128/include)
-target_link_libraries(test_math_const_float128 cxx_math_constants quadmath)
-add_test(NAME run_test_math_const_float128 COMMAND bash -c "./bin/test_math_const_float128 > output/test_math_const_float128.txt")
+  ../cxx_complex_math/include
+  ../cxx_fp_utils/include # then this...
+  ../include)
+target_link_libraries(test_ext_math_constants cxx_math_constants quadmath mpfr gmp)
+add_test(NAME run_test_ext_math_constants COMMAND bash -c "./bin/test_ext_math_constants > output/test_ext_math_constants.txt")
 
 find_package(Doxygen)
 if (DOXYGEN_FOUND)

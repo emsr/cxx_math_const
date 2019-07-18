@@ -31,6 +31,8 @@
 
 #pragma GCC system_header
 
+#include <math>
+
 #if __cplusplus >= 201703L
 
 namespace __gnu_cxx
@@ -40,19 +42,19 @@ namespace math
 //_GLIBCXX_BEGIN_NAMESPACE_VERSION
 
   // Constant @f$ 4\pi @f$.
-  template<typename _Tp>
-    inline static constexpr _Tp
-    __4_pi_v           = _Tp{12.566'37061'43591'72953'85057'35331'18011'53678L};
+  //template<typename _Tp>
+  //  inline static constexpr _Tp
+  //  __4_pi_v           = _Tp{12.566'37061'43591'72953'85057'35331'18011'53678L};
 
   // Constant @f$ 4\pi/3 @f$.
-  template<typename _Tp>
-    inline constexpr _Tp
-    __4_pi_div_3_v     = _Tp{4.1887'90204'78639'09846'16857'84437'26705'12253L};
+  //template<typename _Tp>
+  //  inline constexpr _Tp
+  //  __4_pi_div_3_v     = _Tp{4.1887'90204'78639'09846'16857'84437'26705'12253L};
 
   // Constant @f$ 2\pi @f$.
-  template<typename _Tp>
-    inline constexpr _Tp
-    __2_pi_v           = _Tp{6.2831'85307'17958'64769'25286'76655'90057'68391L};
+  //template<typename _Tp>
+  //  inline constexpr _Tp
+  //  __2_pi_v           = _Tp{6.2831'85307'17958'64769'25286'76655'90057'68391L};
 
   // Constant @f$ \pi @f$.
   template<typename _Tp>
@@ -60,19 +62,19 @@ namespace math
     __pi_v             = _Tp{3.1415'92653'58979'32384'62643'38327'95028'84195L};
 
   // Constant @f$ \pi / 2 @f$.
-  template<typename _Tp>
-    inline constexpr _Tp
-    __pi_half_v        = _Tp{1.5707'96326'79489'66192'31321'69163'97514'42098L};
+  //template<typename _Tp>
+  //  inline constexpr _Tp
+  //  __pi_half_v        = _Tp{1.5707'96326'79489'66192'31321'69163'97514'42098L};
 
   // Constant @f$ \pi / 3 @f$.
-  template<typename _Tp>
-    inline constexpr _Tp
-    __pi_third_v       = _Tp{1.0471'97551'19659'77461'54214'46109'31676'28063L};
+  //template<typename _Tp>
+  //  inline constexpr _Tp
+  //  __pi_third_v       = _Tp{1.0471'97551'19659'77461'54214'46109'31676'28063L};
 
   // Constant @f$ \pi / 4 @f$.
-  template<typename _Tp>
-    inline constexpr _Tp
-    __pi_quarter_v     = _Tp{0.7853'98163'39744'83096'15660'84581'98757'21049L};
+  //template<typename _Tp>
+  //  inline constexpr _Tp
+  //  __pi_quarter_v     = _Tp{0.7853'98163'39744'83096'15660'84581'98757'21049L};
 
   // Constant @f$ \sqrt(\pi) @f$.
   template<typename _Tp>
@@ -236,26 +238,26 @@ namespace math
 
   // double "specializations"
 
-  inline constexpr double
-  __4_pi  	      = __4_pi_v<double>;
+  //inline constexpr double
+  //__4_pi  	      = __4_pi_v<double>;
 
-  inline constexpr double
-  __4_pi_div_3        = __4_pi_div_3_v<double>;
+  //inline constexpr double
+  //__4_pi_div_3        = __4_pi_div_3_v<double>;
 
-  inline constexpr double
-  __2_pi  	      = __2_pi_v<double>;
+  //inline constexpr double
+  //__2_pi  	      = __2_pi_v<double>;
 
   inline constexpr double
   __pi  	      = __pi_v<double>;
 
-  inline constexpr double
-  __pi_half  	      = __pi_half_v<double>;
+  //inline constexpr double
+  //__pi_half  	      = __pi_half_v<double>;
 
-  inline constexpr double
-  __pi_third  	      = __pi_third_v<double>;
+  //inline constexpr double
+  //__pi_third  	      = __pi_third_v<double>;
 
-  inline constexpr double
-  __pi_quarter        = __pi_quarter_v<double>;
+  //inline constexpr double
+  //__pi_quarter        = __pi_quarter_v<double>;
 
   inline constexpr double
   __root_pi  	      = __root_pi_v<double>;

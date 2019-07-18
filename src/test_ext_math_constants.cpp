@@ -39,35 +39,35 @@ template<typename _Tp>
     std::cout << '\n';
     std::cout << "type                      : " << std::quoted(name) << '\n';
 
-    std::cout << "x 4 pi/3                   : "
-	      << std::setw(wd) << __4_pi_v<_Tp> << '\n';
+//    std::cout << "x 4 pi/3                   : "
+//	      << std::setw(wd) << __4_pi_v<_Tp> << '\n';
 
-    std::cout << "x 4 pi/3                   : "
-	      << std::setw(wd) << __4_pi_div_3_v<_Tp> << '\n';
+//    std::cout << "x 4 pi/3                   : "
+//	      << std::setw(wd) << __4_pi_div_3_v<_Tp> << '\n';
 
-    std::cout << "  2 pi                     : "
-	      << std::setw(wd) << __2_pi_v<_Tp> << '\n';
+//    std::cout << "  2 pi                     : "
+//	      << std::setw(wd) << __2_pi_v<_Tp> << '\n';
 
     std::cout << "* pi                       : "
 	      << std::setw(wd) << __pi_v<_Tp> << '\n';
 
-    std::cout << "x pi/2                     : "
-	      << std::setw(wd) << __pi_half_v<_Tp> << '\n';
+//    std::cout << "x pi/2                     : "
+//	      << std::setw(wd) << __pi_half_v<_Tp> << '\n';
 
-    std::cout << "x pi/3                     : "
-	      << std::setw(wd) << __pi_third_v<_Tp> << '\n';
+//    std::cout << "x pi/3                     : "
+//	      << std::setw(wd) << __pi_third_v<_Tp> << '\n';
 
-    std::cout << "x pi/4                     : "
-	      << std::setw(wd) << __pi_quarter_v<_Tp> << '\n';
+//    std::cout << "x pi/4                     : "
+//	      << std::setw(wd) << __pi_quarter_v<_Tp> << '\n';
 
-    std::cout << "  sqrt(pi)                 : "
-	      << std::setw(wd) << __root_pi_v<_Tp> << '\n';
+//    std::cout << "  sqrt(pi)                 : "
+//	      << std::setw(wd) << __root_pi_v<_Tp> << '\n';
 
-    std::cout << "x cbrt(pi)                 : "
-	      << std::setw(wd) << __cbrt_pi_v<_Tp> << '\n';
+//    std::cout << "x cbrt(pi)                 : "
+//	      << std::setw(wd) << __cbrt_pi_v<_Tp> << '\n';
 
-    std::cout << "x sqrt(pi/2)               : "
-	      << std::setw(wd) << __root_pi_div_2_v<_Tp> << '\n';
+//    std::cout << "x sqrt(pi/2)               : "
+//	      << std::setw(wd) << __root_pi_div_2_v<_Tp> << '\n';
 
     std::cout << "* 1/pi                     : "
 	      << std::setw(wd) << __one_div_pi_v<_Tp> << '\n';
@@ -138,20 +138,20 @@ template<typename _Tp>
     std::cout << "* sqrt(3)                  : "
 	      << std::setw(wd) << __root_3_v<_Tp> << '\n';
 
-    std::cout << "x sqrt(3)                  : "
-	      << std::setw(wd) << __root_3_div_2_v<_Tp> << '\n';
+//    std::cout << "x sqrt(3)                  : "
+//	      << std::setw(wd) << __root_3_div_2_v<_Tp> << '\n';
 
-    std::cout << "x sqrt(5)                  : "
-	      << std::setw(wd) << __root_5_v<_Tp> << '\n';
+//    std::cout << "x sqrt(5)                  : "
+//	      << std::setw(wd) << __root_5_v<_Tp> << '\n';
 
-    std::cout << "x sqrt(7)                  : "
-	      << std::setw(wd) << __root_7_v<_Tp> << '\n';
+//    std::cout << "x sqrt(7)                  : "
+//	      << std::setw(wd) << __root_7_v<_Tp> << '\n';
 
-    std::cout << "x cbrt(3)                  : "
-	      << std::setw(wd) << __cbrt_3_v<_Tp> << '\n';
+//    std::cout << "x cbrt(3)                  : "
+//	      << std::setw(wd) << __cbrt_3_v<_Tp> << '\n';
 
-    std::cout << "x 1/sqrt(2)                : "
-	      << std::setw(wd) << __one_div_root_2_v<_Tp> << '\n';
+//    std::cout << "x 1/sqrt(2)                : "
+//	      << std::setw(wd) << __one_div_root_2_v<_Tp> << '\n';
   }
 
 int

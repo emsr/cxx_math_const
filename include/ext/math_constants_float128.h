@@ -121,6 +121,12 @@ namespace math
     __two_div_pi_v
       = 0.6366'19772'36758'13430'75535'05349'00574'48138Q;
 
+  // Constant @f$ 1 / \sqrt(\pi) @f$.
+  template<>
+    inline constexpr __float128
+    __one_div_root_pi_v
+      = 5.6418'95835'47756'28694'80794'51560'77258'58438e-1Q;
+
   // Constant @f$ 2 / \sqrt(\pi) @f$.
   template<>
     inline constexpr __float128

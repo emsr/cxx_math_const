@@ -26,7 +26,11 @@ target_include_directories(cxx_math_constants INTERFACE include)
 add_executable(test_math_constants src/test_math_constants.cpp)
 target_include_directories(test_math_constants PRIVATE
   ../cxx_float128/include
-  ../cxx_complex_utils/include # ../include/complex needs this.
+  ../cxx_polynomial/include
+  ../cxx_summation/include
+  ../cxx_integration/include
+  ../cxx_complex_utils/include
+  ../cxx_complex_math/include
   ../cxx_fp_utils/include # then this...
   ../include
   ../3rdparty/mpreal)

@@ -110,6 +110,11 @@ namespace math
 
   template<>
     inline mpfr::mpreal
+    __one_div_root_pi_v
+      = 1 / mpfr::sqrt(mpfr::const_pi(mpfr::mpreal::get_default_prec()));
+
+  template<>
+    inline mpfr::mpreal
     __two_div_root_pi_v
       = 2 / mpfr::sqrt(mpfr::const_pi(mpfr::mpreal::get_default_prec()));
 

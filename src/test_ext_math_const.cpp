@@ -3,6 +3,7 @@ $HOME/bin/bin/g++ -std=c++17 -g -o test_math_const test_math_const.cpp
 ./test_math_const > test_math_const.txt
 */
 
+#include <math>
 #include <ext/math>
 #include <complex>
 #include <iostream>
@@ -41,5 +42,8 @@ main()
 
   auto pi = __pi_v<std::complex<double>>;
   std::cout << pi << '\n';
+
+  auto pi_std = std::math::pi_v<std::complex<double>>;
+  std::cout << pi_std << '\n';
 }
 

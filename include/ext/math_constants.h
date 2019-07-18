@@ -104,6 +104,16 @@ namespace math
     inline constexpr _Tp
     __two_div_pi_v     = _Tp{0.6366'19772'36758'13430'75535'05349'00574'48138L};
 
+  // Constant @f$ 1 / \sqrt(\pi) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __one_div_root_pi_v= _Tp{1.1283'79167'09551'25738'96158'90312'15451'71688L};
+
+  // Constant @f$ 1 / \sqrt(\pi) @f$.
+  template<typename _Tp>
+    inline constexpr _Tp
+    __one_div_root_pi_v= _Tp{5.6418'95835'47756'28694'80794'51560'77258'58438e-1L};
+
   // Constant @f$ 2 / \sqrt(\pi) @f$.
   template<typename _Tp>
     inline constexpr _Tp

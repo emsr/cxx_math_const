@@ -39,7 +39,7 @@
 
 namespace __gnu_cxx
 {
-namespace math
+namespace numbers
 {
 //_GLIBCXX_BEGIN_NAMESPACE_VERSION
 
@@ -266,7 +266,7 @@ namespace math
       = 0.7071'06781'18654'75244'00844'36210'48490'39285Q;
 
 //_GLIBCXX_END_NAMESPACE_VERSION
-} // namespace math
+} // namespace numbers
 } // namespace __gnu_cxx
 
 #endif // C++17

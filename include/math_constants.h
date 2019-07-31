@@ -38,7 +38,7 @@
 
 namespace std //_GLIBCXX_VISIBILITY(default)
 {
-namespace math
+namespace numbers
 {
 //_GLIBCXX_BEGIN_NAMESPACE_VERSION
 
@@ -179,7 +179,7 @@ namespace math
   phi = phi_v<double>;
 
 //_GLIBCXX_END_NAMESPACE_VERSION
-} // namespace math
+} // namespace numbers
 } // namespace std
 
 #endif // C++17

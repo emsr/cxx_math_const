@@ -36,7 +36,7 @@
 
 namespace std //_GLIBCXX_VISIBILITY(default)
 {
-namespace math
+namespace numbers
 {
 //_GLIBCXX_BEGIN_NAMESPACE_VERSION
 
@@ -133,7 +133,7 @@ namespace math
       = 1.6180'33988'74989'48482'04586'83436'56381'17720e+0Q;
 
 //_GLIBCXX_END_NAMESPACE_VERSION
-} // namespace math
+} // namespace numbers
 } // namespace std
 
 #endif // C++17

@@ -40,7 +40,7 @@
 
 namespace std //_GLIBCXX_VISIBILITY(default)
 {
-namespace math
+namespace numbers
 {
 //_GLIBCXX_BEGIN_NAMESPACE_VERSION
 
@@ -110,7 +110,7 @@ namespace math
       = (1 + mpfr::sqrt(mpfr::mpreal(5, mpfr::mpreal::get_default_prec()))) / 2;
 
 //_GLIBCXX_END_NAMESPACE_VERSION
-} // namespace math
+} // namespace numbers
 } // namespace std
 
 #endif // C++11

@@ -3,7 +3,7 @@ $HOME/bin/bin/g++ -std=c++17 -g -o test_math_const_float128 test_math_const_floa
 ./test_math_const_float128 > test_math_const_float128.txt
 */
 
-#include <math>
+#include <numbers>
 #include <math_constants_float128.h>
 #include <ext/math_constants_float128.h>
 #include <complex>
@@ -16,10 +16,10 @@ $HOME/bin/bin/g++ -std=c++17 -g -o test_math_const_float128 test_math_const_floa
 int
 main()
 {
-  using namespace std::math;
+  using namespace std::numbers;
   std::cout.precision(34);
 
-  auto pi = std::math::pi_v<__float128>;
+  auto pi = std::numbers::pi_v<__float128>;
   std::cout << pi << '\n';
 }
 

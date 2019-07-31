@@ -3,7 +3,7 @@ $HOME/bin/bin/g++ -std=c++17 -g -o test_math_const test_math_const.cpp
 ./test_math_const > test_math_const.txt
 */
 
-#include <ext/math>
+#include <ext/numbers>
 #include <complex>
 #include <iostream>
 #include <string>
@@ -37,7 +37,7 @@ template<typename _Tp, typename _Flt>
 int
 main()
 {
-  using namespace __gnu_cxx::math;
+  using namespace __gnu_cxx::numbers;
 
   auto pi = __pi_v<std::complex<double>>;
   std::cout << pi << '\n';

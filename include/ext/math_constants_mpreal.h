@@ -39,7 +39,7 @@
 
 namespace __gnu_cxx _GLIBCXX_VISIBILITY(default)
 {
-namespace math
+namespace numbers
 {
 //_GLIBCXX_BEGIN_NAMESPACE_VERSION
 
@@ -232,7 +232,7 @@ namespace math
       = 1 / mpfr::sqrt(mpfr::mpreal(2, mpfr::mpreal::get_default_prec()));
 
 //_GLIBCXX_END_NAMESPACE_VERSION
-} // namespace math
+} // namespace numbers
 } // namespace __gnu_cxx
 
 #endif // C++17

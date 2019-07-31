@@ -35,7 +35,7 @@
 
 namespace __gnu_cxx
 {
-namespace math
+namespace numbers
 {
 //_GLIBCXX_BEGIN_NAMESPACE_VERSION
 
@@ -338,7 +338,7 @@ namespace math
   __one_div_root_2    = __one_div_root_2_v<double>;
 
 //_GLIBCXX_END_NAMESPACE_VERSION
-} // namespace math
+} // namespace numbers
 } // namespace __gnu_cxx
 
 #endif // C++17

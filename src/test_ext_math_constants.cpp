@@ -4,8 +4,8 @@ Cut this way down.
 My idea is supporting base 10.
 
 Round out the six logs of bases:
-log_10(2)
-log_2(10)
+log_10(2) = ln(2)/ln(10) no loss
+log_2(10) = ln(10)/ln(2)
 
 People have mentioned tau = 2pi as losing a bit even with std.
 Division by 2 is still exact in decimal???

@@ -24,27 +24,11 @@ add_library(cxx_math_constants INTERFACE)
 target_include_directories(cxx_math_constants INTERFACE include)
 
 add_executable(test_math_constants src/test_math_constants.cpp)
-target_include_directories(test_math_constants PRIVATE
-  ../cxx_polynomial/include
-  ../cxx_summation/include
-  ../cxx_integration/include
-  ../cxx_complex_utils/include
-  ../cxx_complex_math/include
-  ../cxx_fp_utils/include # then this...
-  ../include)
-target_link_libraries(test_math_constants cxx_math_constants quadmath mpfr gmp)
+target_link_libraries(test_math_constants cxx_math_constants)
 add_test(NAME run_test_math_constants COMMAND bash -c "./bin/test_math_constants > output/test_math_constants.txt")
 
 add_executable(test_ext_math_constants src/test_ext_math_constants.cpp)
-target_include_directories(test_ext_math_constants PRIVATE
-  ../cxx_polynomial/include
-  ../cxx_summation/include
-  ../cxx_integration/include
-  ../cxx_complex_utils/include
-  ../cxx_complex_math/include
-  ../cxx_fp_utils/include # then this...
-  ../include)
-target_link_libraries(test_ext_math_constants cxx_math_constants quadmath mpfr gmp)
+target_link_libraries(test_ext_math_constants cxx_math_constants)
 add_test(NAME run_test_ext_math_constants COMMAND bash -c "./bin/test_ext_math_constants > output/test_ext_math_constants.txt")
 
 find_package(Doxygen)

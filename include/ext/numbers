@@ -26,8 +26,8 @@
  *  This is a Standard C++ Library header.
  */
 
-#ifndef _GLIBCXX_EXT_MATH
-#define _GLIBCXX_EXT_MATH 1
+#ifndef _GLIBCXX_EXT_NUMBERS
+#define _GLIBCXX_EXT_NUMBERS 1
 
 #pragma GCC system_header
 
@@ -39,4 +39,4 @@
 #endif // C++17
 //#endif // C++2a
 
-#endif // _GLIBCXX_EXT_MATH
+#endif // _GLIBCXX_EXT_NUMBERS

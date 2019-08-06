@@ -20,6 +20,9 @@ endif ()
 
 enable_testing()
 
+add_custom_target(make_cxx_math_constants_output_dir ALL
+  COMMAND ${CMAKE_COMMAND} -E make_directory output)
+
 add_library(cxx_math_constants INTERFACE)
 target_include_directories(cxx_math_constants INTERFACE include)
 
@@ -52,7 +55,7 @@ add_test(NAME run_test_math_const_float128 COMMAND bash -c "./bin/test_math_cons
 
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
-  add_custom_target(docs_math_constants
+  add_custom_target(docs_cxx_math_constants
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/docs
     COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUTPUT}
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}

@@ -65,7 +65,7 @@ namespace numbers
   template<typename _Tp>
     inline constexpr _Tp
     pi_v          = _Tp{3.1415'92653'58979'32384'62643'38327'95028'84195e+0L};
-  //= _Tp{0x3.243'F6A8'885A'308D'3131'98A2'E037'0734'4A40'9382'2299'F31Dp+0L}
+     //= _Tp{0x3.243'F6A8'885A'308D'3131'98A2'E037'0734'4A40'9382'2299'F31Dp+0L}
 
   /// The reciprocal of Archimedes' constant @f$ 1/\pi @f$
   /// <a href="https://oeis.org/A049541"> (OEIS A049541)</a>

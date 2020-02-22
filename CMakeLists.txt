@@ -33,7 +33,7 @@ target_include_directories(test_math_constants PRIVATE
   ../cxx_fp_utils/include # then this...
   ../include
   ../3rdparty/mpreal)
-target_link_libraries(test_math_constants cxx_math_constants quadmath mpfr gmp)
+target_link_libraries(test_math_constants cxx_math_constants cxx_numeric_limits quadmath mpfr gmp)
 add_test(NAME run_test_math_constants COMMAND bash -c "${CMAKE_BINARY_DIR}/bin/test_math_constants > output/test_math_constants.txt")
 
 add_executable(test_math_const src/test_math_const.cpp)

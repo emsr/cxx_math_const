@@ -183,6 +183,6 @@ namespace numbers
 } // namespace std
 
 #endif // C++17
-//#endif // C++2a
+//#endif // C++20
 
 #endif // _MATH_CONSTANTS_H

@@ -46,15 +46,12 @@ template<typename _Tp>
     std::cout << " cbrt(pi)                 : "
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::cbrtpi
 	      << std::setprecision(prec) << std::setw(wd) << emsr::cbrtpi_v<_Tp> << '\n';
-    std::cout << " sqrt(pi/2)               : "
-	      << std::setprecision(lprec) << std::setw(lwd) << emsr::sqrtpi_div_2
-	      << std::setprecision(prec) << std::setw(wd) << emsr::sqrtpi_div_2_v<_Tp> << '\n';
     std::cout << " 1/ pi                    : "
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::inv_pi
 	      << std::setprecision(prec) << std::setw(wd) << emsr::inv_pi_v<_Tp> << '\n';
     std::cout << " 1/ 2pi                    : "
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::inv_pi_2
-	      << std::setprecision(prec) << std::setw(wd) << emsr::inv_2_pi_v<_Tp> << '\n';
+	      << std::setprecision(prec) << std::setw(wd) << emsr::inv_tau_v<_Tp> << '\n';
     std::cout << " 2/ pi                    : "
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::two_div_pi
 	      << std::setprecision(prec) << std::setw(wd) << emsr::two_div_pi_v<_Tp> << '\n';
@@ -65,11 +62,11 @@ template<typename _Tp>
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::pi_sqr_div_6
 	      << std::setprecision(prec) << std::setw(wd) << emsr::pi_sqr_div_6_v<_Tp> << '\n';
     std::cout << " sqrt(2 pi)               : "
-	      << std::setprecision(lprec) << std::setw(lwd) << emsr::sqrt2_pi
-	      << std::setprecision(prec) << std::setw(wd) << emsr::sqrt2_pi_v<_Tp> << '\n';
+	      << std::setprecision(lprec) << std::setw(lwd) << emsr::sqrttau
+	      << std::setprecision(prec) << std::setw(wd) << emsr::sqrttau_v<_Tp> << '\n';
     std::cout << " ln(sqrt(2 pi))           : "
-	      << std::setprecision(lprec) << std::setw(lwd) << emsr::lnsqrt2_pi
-	      << std::setprecision(prec) << std::setw(wd) << emsr::lnsqrt2_pi_v<_Tp> << '\n';
+	      << std::setprecision(lprec) << std::setw(lwd) << emsr::lnsqrttau
+	      << std::setprecision(prec) << std::setw(wd) << emsr::lnsqrttau_v<_Tp> << '\n';
     std::cout << " rad2deg                  : "
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::deg
 	      << std::setprecision(prec) << std::setw(wd) << emsr::deg_v<_Tp> << '\n';

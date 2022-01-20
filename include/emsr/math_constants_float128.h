@@ -148,7 +148,7 @@ namespace emsr
     pi_4_div_3_v<__float128>
       = 4.1887'90204'78639'09846'16857'84437'26705'12253Q;
 
-  // Constant @f$ 2\pi @f$.
+  // Constant @f$ \tau = 2\pi @f$.
   template<>
     inline constexpr __float128
     tau_v<__float128>
@@ -166,16 +166,10 @@ namespace emsr
     cbrtpi_v<__float128>
       = 1.4645'91887'56152'32630'20142'52726'37903'91736Q;
 
-  // Constant @f$ \sqrt(\pi / 2) @f$.
+  // Constant @f$ 1 / 2\pi = 1 / \tau @f$.
   template<>
     inline constexpr __float128
-    sqrtpi_div_2_v<__float128>
-      = 1.2533'14137'31550'02512'07882'64240'55226'26505Q;
-
-  // Constant @f$ 1 / 2\pi @f$.
-  template<>
-    inline constexpr __float128
-    inv_2_pi_v<__float128>
+    inv_tau_v<__float128>
       = 0.1591'54943'09189'53357'68883'76337'25143'62035Q;
 
   // Constant @f$ 2 / \pi @f$.
@@ -196,16 +190,16 @@ namespace emsr
     pi_sqr_div_6_v<__float128>
       = 1.6449'34066'84822'64364'72415'16664'60251'89221Q;
 
-  // Constant: @f$ \sqrt{2\pi}
+  // Constant: @f$ \sqrt{2\pi} = \sqrt(\tau) @f$.
   template<>
     inline constexpr __float128
-    sqrt2_pi_v<__float128>
+    sqrttau_v<__float128>
       = 2.5066'28274'63100'05024'15765'28481'10452'53010Q;
 
-  // Constant: @f$ \log(\sqrt{2\pi})
+  // Constant: @f$ \log(\sqrt{2\pi}) = \log(\sqrt(\tau)) @f$.
   template<>
     inline constexpr __float128
-    lnsqrt2_pi_v<__float128>
+    lnsqrttau_v<__float128>
       = 0.9189'38533'20467'27417'80329'73640'56176'39862Q;
 
   // Constant: radians to degree conversion.
@@ -244,7 +238,7 @@ namespace emsr
     catalan_v<__float128>
       = 0.9159'65594'17721'90150'54603'51493'23841'10773Q;
 
-  // Constant @f$ \sqrt(3) @f$.
+  // Constant @f$ \sqrt(3) / 2 @f$.
   template<>
     inline constexpr __float128
     sqrt3_div_2_v<__float128>

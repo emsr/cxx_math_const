@@ -203,15 +203,10 @@ namespace emsr
     inline constexpr Tp
     cbrtpi_v        = Tp{1.4645'91887'56152'32630'20142'52726'37903'91736L};
 
-  // Constant @f$ \sqrt(\pi / 2) @f$.
+  // Constant @f$ 1 / 2\pi = 1 / \tau @f$.
   template<typename Tp>
     inline constexpr Tp
-    sqrtpi_div_2_v  = Tp{1.2533'14137'31550'02512'07882'64240'55226'26505L};
-
-  // Constant @f$ 1 / 2\pi @f$.
-  template<typename Tp>
-    inline constexpr Tp
-    inv_2_pi_v   = Tp{0.1591'54943'09189'53357'68883'76337'25143'62035L};
+    inv_tau_v   = Tp{0.1591'54943'09189'53357'68883'76337'25143'62035L};
 
   // Constant @f$ 2 / \pi @f$.
   template<typename Tp>
@@ -228,15 +223,15 @@ namespace emsr
     inline constexpr Tp
     pi_sqr_div_6_v   = Tp{1.6449'34066'84822'64364'72415'16664'60251'89221L};
 
-  // Constant: @f$ \sqrt{2\pi}
+  // Constant: @f$ \sqrt{2\pi} = \sqrt(\tau) @f$.
   template<typename Tp>
     inline constexpr Tp
-    sqrt2_pi_v      = Tp{2.5066'28274'63100'05024'15765'28481'10452'53010L};
+    sqrttau_v      = Tp{2.5066'28274'63100'05024'15765'28481'10452'53010L};
 
-  // Constant: @f$ \log(\sqrt{2\pi})
+  // Constant: @f$ \log(\sqrt{2\pi}) = \log(\sqrt(\tau)) @f$.
   template<typename Tp>
     inline constexpr Tp
-    lnsqrt2_pi_v   = Tp{0.9189'38533'20467'27417'80329'73640'56176'39862L};
+    lnsqrttau_v   = Tp{0.9189'38533'20467'27417'80329'73640'56176'39862L};
 
   // Constant: radians to degree conversion.
   template<typename Tp>
@@ -268,7 +263,7 @@ namespace emsr
     inline constexpr Tp
     catalan_v        = Tp{0.9159'65594'17721'90150'54603'51493'23841'10773L};
 
-  // Constant @f$ \sqrt(3) @f$.
+  // Constant @f$ \sqrt(3) / 2 @f$.
   template<typename Tp>
     inline constexpr Tp
     sqrt3_div_2_v   = Tp{0.8660'25403'78443'86467'63723'17075'29361'83473L};
@@ -311,10 +306,7 @@ namespace emsr
   cbrtpi  	      = cbrtpi_v<double>;
 
   inline constexpr double
-  sqrtpi_div_2     = sqrtpi_div_2_v<double>;
-
-  inline constexpr double
-  inv_2_pi      = inv_2_pi_v<double>;
+  inv_tau      = inv_tau_v<double>;
 
   inline constexpr double
   two_div_pi        = two_div_pi_v<double>;
@@ -326,10 +318,10 @@ namespace emsr
   pi_sqr_div_6      = pi_sqr_div_6_v<double>;
 
   inline constexpr double
-  sqrt2_pi         = sqrt2_pi_v<double>;
+  sqrttau         = sqrttau_v<double>;
 
   inline constexpr double
-  lnsqrt2_pi      = lnsqrt2_pi_v<double>;
+  lnsqrttau      = lnsqrttau_v<double>;
 
   inline constexpr double
   deg  	      = deg_v<double>;

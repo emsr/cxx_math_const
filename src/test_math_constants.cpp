@@ -7,6 +7,7 @@
 
 //#include <emsr/numeric_limits.h>
 //#include <emsr/numeric_limits_float128.h>
+#include <bits/numeric_limits.h>
 
 //#include <emsr/float128_io.h>
 //#include <mpreal.h>
@@ -21,7 +22,7 @@ template<typename _Tp>
   {
     auto name{std::type_index{typeid(proto)}.name()};
 
-    auto prec = emsr::digits10(proto);
+    auto prec = __gnu_cxx::__digits10(proto);
     auto wd = 8 + prec;
     auto lprec = std::numeric_limits<long double>::digits10;
     auto lwd = 8 + lprec;
@@ -35,7 +36,7 @@ template<typename _Tp>
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::pi_4_div_3
 	      << std::setprecision(prec) << std::setw(wd) << emsr::pi_4_div_3_v<_Tp> << '\n';
     std::cout << " 2 pi                     : "
-	      << std::setprecision(lprec) << std::setw(lwd) << emsr::pi_2
+	      << std::setprecision(lprec) << std::setw(lwd) << emsr::tau
 	      << std::setprecision(prec) << std::setw(wd) << emsr::tau_v<_Tp> << '\n';
     std::cout << " pi                       : "
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::pi
@@ -50,7 +51,7 @@ template<typename _Tp>
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::inv_pi
 	      << std::setprecision(prec) << std::setw(wd) << emsr::inv_pi_v<_Tp> << '\n';
     std::cout << " 1/ 2pi                    : "
-	      << std::setprecision(lprec) << std::setw(lwd) << emsr::inv_pi_2
+	      << std::setprecision(lprec) << std::setw(lwd) << emsr::inv_tau
 	      << std::setprecision(prec) << std::setw(wd) << emsr::inv_tau_v<_Tp> << '\n';
     std::cout << " 2/ pi                    : "
 	      << std::setprecision(lprec) << std::setw(lwd) << emsr::two_div_pi

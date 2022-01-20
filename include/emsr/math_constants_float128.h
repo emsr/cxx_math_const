@@ -139,7 +139,7 @@ namespace emsr
   // Constant @f$ 4\pi @f$.
   template<>
     inline constexpr __float128
-    pi_4_v
+    pi_4_v<__float128>
       = 12.566'37061'43591'72953'85057'35331'18011'53678Q;
 
   // Constant @f$ 4\pi/3 @f$.

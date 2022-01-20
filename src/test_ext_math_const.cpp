@@ -1,19 +1,10 @@
 
-#include <ext/numbers>
 #include <complex>
 #include <iostream>
 #include <string>
 #include <type_traits>
 
-#if __cpp_lib_type_trait_variable_templates < 201510L
-namespace std
-{
-  template<typename _Tp, typename... _Args>
-    constexpr bool is_constructible_v = is_constructible<_Tp, _Args...>::value;
-  template<typename _Flt>
-    constexpr bool is_floating_point_v = is_floating_point<_Flt>::value;
-}
-#endif
+#include <emsr/math_constants.h>
 
 // This can't work as constexpr.
 struct sfloat : public std::string
@@ -25,17 +16,15 @@ struct sfloat : public std::string
 
 template<typename _Tp, typename _Flt>
   struct
-  __math_constant_t : std::enable_if<std::is_constructible_v<_Tp, _Flt>
-				  && std::is_floating_point_v<_Flt>, _Flt>
+  math_constant_t : std::enable_if<std::is_constructible_v<_Tp, _Flt>
+				&& std::is_floating_point_v<_Flt>, _Flt>
   { };
 
 
 int
 main()
 {
-  using namespace __gnu_cxx::numbers;
-
-  auto pi = __pi_v<std::complex<double>>;
-  std::cout << pi << '\n';
+  auto tau = emsr::tau_v<std::complex<double>>;
+  std::cout << tau << '\n';
 }
 

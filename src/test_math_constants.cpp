@@ -7,7 +7,7 @@
 
 //#include <emsr/numeric_limits.h>
 //#include <emsr/numeric_limits_float128.h>
-#include <bits/numeric_limits.h>
+#include <emsr/numeric_limits.h>
 
 //#include <emsr/float128_io.h>
 //#include <mpreal.h>
@@ -22,7 +22,7 @@ template<typename _Tp>
   {
     auto name{std::type_index{typeid(proto)}.name()};
 
-    auto prec = __gnu_cxx::__digits10(proto);
+    auto prec = emsr::digits10(proto);
     auto wd = 8 + prec;
     auto lprec = std::numeric_limits<long double>::digits10;
     auto lwd = 8 + lprec;

@@ -32,9 +32,7 @@
 #else
 
 #include <emsr/math_constants.h>
-#define _GLIBCXX_NO_SPECFUN 1
 #include <mpreal.h>
-#undef _GLIBCXX_NO_SPECFUN
 
 // This first block of numbers is available in <numbers>, std::numbers:: in C++20.
 

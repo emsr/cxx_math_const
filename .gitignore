@@ -1,6 +1,8 @@
 
 bin/
 
+Doxyfile.bak
+
 CMakeCache.txt
 CMakeFiles/
 Makefile

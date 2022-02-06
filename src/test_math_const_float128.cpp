@@ -12,9 +12,11 @@
 int
 main()
 {
+#ifdef EMSR_HAVE_FLOAT128
   std::cout.precision(34);
 
   auto pi = emsr::pi_v<__float128>;
   std::cout << pi << '\n';
+#endif // EMSR_HAVE_FLOAT128
 }
 

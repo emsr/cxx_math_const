@@ -26,15 +26,17 @@ add_custom_target(make_cxx_math_constants_output_dir ALL
 add_library(cxx_math_constants INTERFACE)
 target_include_directories(cxx_math_constants INTERFACE include)
 
-add_executable(test_math_constants src/test_math_constants.cpp)
-target_include_directories(test_math_constants PRIVATE
-  ../cxx_float128/include
-  ../cxx_complex_utils/include # ../include/complex needs this.
-  ../cxx_fp_utils/include # then this...
-  ../include
-  ../3rdparty/mpreal)
-target_link_libraries(test_math_constants cxx_math_constants cxx_numeric_limits quadmath mpfr gmp)
-add_test(NAME run_test_math_constants COMMAND bash -c "${CMAKE_BINARY_DIR}/bin/test_math_constants > output/test_math_constants.txt")
+if (HAVE_MPREAL)
+  add_executable(test_math_constants src/test_math_constants.cpp)
+  target_include_directories(test_math_constants PRIVATE
+    ../cxx_float128/include
+    ../cxx_complex_utils/include # ../include/complex needs this.
+    ../cxx_fp_utils/include # then this...
+    ../include
+    ../3rdparty/mpreal)
+  target_link_libraries(test_math_constants cxx_math_constants cxx_numeric_limits quadmath mpfr gmp)
+  add_test(NAME run_test_math_constants COMMAND bash -c "${CMAKE_BINARY_DIR}/bin/test_math_constants > output/test_math_constants.txt")
+endif(HAVE_MPREAL)
 
 add_executable(test_math_const src/test_math_const.cpp)
 target_link_libraries(test_math_const cxx_math_constants)
